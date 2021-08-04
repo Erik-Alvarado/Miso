@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: "Thirsty Soft Regular";
+  src: url("/Assets/Fonts/Thirsty Soft W01 Regular.ttf");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #333333;
+  font-family: "Thirsty Soft Regular";
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #333333;
+}
+
+.nav-down .misoNav {
+  background-color: #ff4a4a;
+  width: 100%;
+  display: flex;
+  padding: 0 40px;
+  justify-content: space-between;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-down .misoNav .navLogo {
+  cursor: pointer;
+  width: 100px;
+  padding: 10px 0;
+}
+
+.nav-down .misoNav .misoLinks {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  font-family: "Thirsty Soft Regular";
+  font-size: 1.5rem;
+  align-items: center;
+}
+
+.nav-down .misoNav .misoLinks a {
+  text-decoration: none;
+  color: #ffb5b5;
+}
+
+.nav-down .misoNav .misoLinks a:hover {
+  color: #f2f2f2;
+}
+
+.nav-down .misoNav .misoLinks li {
+  margin-left: 36px;
+}
+
+.nav-down .misoNav .misoLinks i {
+  color: #ffb5b5;
+}
+
+.nav-down .misoNav .misoLinks i:hover {
+  color: #f2f2f2;
+}
+
+.nav-down .misoNav .misoLinks .dropdown .dropdownContent {
+  list-style: none;
+  display: none;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+  padding: 0 10px;
+  margin-left: -12px;
+}
+
+.nav-down .misoNav .misoLinks .dropdown .dropdownContent li {
+  margin-left: 0;
+}
+
+.nav-down .misoNav .misoLinks .dropdown .dropdownContent li:first-child {
+  padding: 30px 0 0 0;
+}
+
+.nav-down .misoNav .misoLinks .dropdown:hover .dropdownContent {
+  position: absolute;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+}
+/*# sourceMappingURL=styles.css.map */

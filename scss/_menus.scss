@@ -1,0 +1,64 @@
+.nav-down {
+  .misoNav {
+    background-color: $misoRed;
+    width: 100%;
+    display: flex;
+    padding: 0 40px;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    .navLogo {
+      cursor: pointer;
+      width: 100px;
+      padding: 10px 0;
+    }
+    .misoLinks {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      font-family: "Thirsty Soft Regular";
+      font-size: 1.5rem;
+      align-items: center;
+      a {
+        text-decoration: none;
+        color: $accentWhite;
+      }
+      a:hover {
+        color: $accentWhiteHov;
+      }
+      li {
+        margin-left: 36px;
+      }
+      i {
+        color: $accentWhite;
+      }
+      i:hover {
+        color: $accentWhiteHov;
+      }
+      .dropdown {
+        .dropdownContent {
+          list-style: none;
+          display: none;
+          background-color: #fff;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+          border-radius: 0 0 10px 10px;
+          text-align: center;
+          padding: 0 10px;
+          margin-left: -12px;
+          li {
+            margin-left: 0;
+          }
+          li:first-child {
+            padding: 30px 0 0 0;
+          }
+        }
+      }
+      .dropdown:hover .dropdownContent {
+        position: absolute;
+        z-index: -1;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
