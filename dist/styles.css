@@ -58,7 +58,7 @@ body {
   background-color: #ff4a4a;
   width: 100%;
   display: flex;
-  padding: 0 40px;
+  padding: 0 35px;
   justify-content: space-between;
   position: relative;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
@@ -67,7 +67,7 @@ body {
 .nav-down .misoNav .navLogo {
   cursor: pointer;
   width: 100px;
-  padding: 10px 0;
+  padding: 10px 0 5px;
 }
 
 .nav-down .misoNav .misoLinks {
@@ -77,6 +77,12 @@ body {
   font-family: "Thirsty Soft Regular";
   font-size: 1.5rem;
   align-items: center;
+}
+
+@media (max-width: 56.25em) {
+  .nav-down .misoNav .misoLinks {
+    z-index: -1;
+  }
 }
 
 .nav-down .misoNav .misoLinks a {
@@ -95,10 +101,30 @@ body {
 
 .nav-down .misoNav .misoLinks i {
   color: #ffb5b5;
+  transition: ease 0.3s;
+}
+
+@media (max-width: 56.25em) {
+  .nav-down .misoNav .misoLinks i {
+    display: none;
+  }
 }
 
 .nav-down .misoNav .misoLinks i:hover {
   color: #f2f2f2;
+}
+
+@media (max-width: 56.25em) {
+  .nav-down .misoNav .misoLinks {
+    margin-top: -250px;
+    opacity: 0%;
+    display: flex;
+    flex-direction: column;
+    transition: ease 0.3s;
+    position: fixed;
+    left: 0;
+    right: 0;
+  }
 }
 
 .nav-down .misoNav .misoLinks .dropdown .dropdownContent {
@@ -112,12 +138,28 @@ body {
   margin: 0 -12px;
 }
 
+@media (max-width: 56.25em) {
+  .nav-down .misoNav .misoLinks .dropdown .dropdownContent {
+    display: contents !important;
+  }
+}
+
 .nav-down .misoNav .misoLinks .dropdown .dropdownContent li {
   margin: 10px 0 0 0;
 }
 
+@media (max-width: 56.25em) {
+  .nav-down .misoNav .misoLinks .dropdown .dropdownContent li {
+    margin: 5px 0 0 0;
+  }
+}
+
 .nav-down .misoNav .misoLinks .dropdown .dropdownContent li:first-child {
   padding: 10px 0 0 0;
+}
+
+.nav-down .misoNav .misoLinks .dropdown .dropdownContent li a:hover {
+  color: #ff4a4a;
 }
 
 .nav-down .misoNav .misoLinks .dropdown:hover .dropdownContent {
@@ -125,5 +167,227 @@ body {
   z-index: -1;
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 56.25em) {
+  .nav-down .misoNav .misoLinks .dropdown:hover .dropdownContent {
+    display: none;
+  }
+}
+
+.nav-down .misoNav .misoBurger {
+  display: none;
+}
+
+@media (max-width: 56.25em) {
+  .nav-down .misoNav .misoBurger {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.nav-down .misoNav .misoBurger i {
+  font-size: 1.5rem;
+  color: #ffb5b5;
+}
+
+.nav-down .misoNav .misoBurger i:hover {
+  color: #f2f2f2;
+  transition: ease 0.3s;
+}
+
+.nav-down .misoNav .misoBurger .hamSelect {
+  margin-left: 15px;
+}
+
+.nav-down .misoNav .misoBurger .hamSelect div {
+  background-color: #ffb5b5;
+  width: 25px;
+  height: 3px;
+  transition: ease 0.3s;
+  border-radius: 50px;
+  transform-origin: left center;
+}
+
+.nav-down .misoNav .misoBurger .hamSelect div:nth-child(2) {
+  margin: 6px 0;
+}
+
+.nav-down .misoNav .misoBurger .hamSelect:hover div {
+  background-color: #f2f2f2;
+}
+
+.nav-down .misoNav .misoBurger .hamSelect.active div:nth-child(2) {
+  transition: ease 0.3s;
+  width: 0;
+  opacity: 0%;
+}
+
+.nav-down .misoNav .misoBurger .hamSelect.active div:nth-child(1) {
+  transition: ease 0.3s;
+  transform: rotate(45deg);
+}
+
+.nav-down .misoNav .misoBurger .hamSelect.active div:nth-child(3) {
+  transition: ease 0.3s;
+  transform: rotate(-45deg);
+}
+
+.nav-down .misoNav.active {
+  align-items: center;
+}
+
+.nav-down .misoNav.active ul.misoLinks {
+  margin-top: 240px;
+  opacity: 100%;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 56.25em) {
+  .nav-down .misoNav.active ul.misoLinks {
+    z-index: -1;
+  }
+}
+
+@media (min-width: 56.25em) {
+  .nav-down .misoNav.active ul.misoLinks {
+    background-color: transparent;
+    width: initial;
+    height: 100%;
+    margin-top: 0;
+    align-items: center;
+  }
+}
+
+.nav-down .misoNav.active ul.misoLinks li {
+  margin-top: 5px;
+}
+
+.nav-down .misoNav.active ul.misoLinks a:hover {
+  color: #ff4a4a;
+}
+
+.nav-down .misoNav.active ul.misoLinks i {
+  display: none;
+}
+
+@media (min-width: 56.25em) {
+  .nav-down .misoNav.active ul.misoLinks i {
+    display: block;
+  }
+}
+
+.nav-down .misoNav.active ul.misoLinks .dropdown a {
+  padding: 0;
+}
+
+@media (min-width: 56.25em) {
+  .nav-down .misoNav.active ul.misoLinks .dropdown a {
+    padding: 25px 0;
+  }
+}
+
+.nav-down .misoNav.active ul.misoLinks .dropdownContent {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  box-shadow: 0 0 0 0;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 39.9375em) {
+  .nav-down .misoNav.active ul.misoLinks .dropdownContent {
+    display: none;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    padding: 10px;
+    margin: 15px -12px;
+  }
+}
+
+.nav-down .misoNav.active ul.misoLinks .dropdownContent li:first-child {
+  margin: 5px 0 0 0;
+  padding: 0;
+}
+
+.nav-down i.misoBag .bag {
+  position: absolute;
+  top: -250px;
+  right: 30px;
+  transition: ease 0.3s;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px 10px 15px;
+  z-index: -2;
+}
+
+.nav-down i.misoBag .bagList td,
+.nav-down i.misoBag .bagTotal td {
+  margin-left: 0;
+  padding: 0px 0 10px;
+}
+
+.nav-down i.misoBag .bagList td:last-child,
+.nav-down i.misoBag .bagTotal td:last-child {
+  text-align: end;
+}
+
+.nav-down i.misoBag .checkOut {
+  border: 0 solid red;
+  background-color: #ff4a4a;
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.nav-down i.misoBag .checkOut h5 {
+  color: #f2f2f2;
+}
+
+.nav-down i.misoBag .checkOut:hover {
+  background-color: #e64242;
+  transition: ease 0.3s;
+}
+
+.nav-down i.misoBag.open {
+  color: #f2f2f2;
+}
+
+.nav-down i.misoBag.open .bag {
+  top: 75px;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: ease 0.3s;
+  cursor: default;
+}
+
+.nav-down i.misoBag.open .bag .reciptHeader {
+  align-self: center;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.nav-down i.misoBag.open .bag .bagList,
+.nav-down i.misoBag.open .bag .bagTotal {
+  list-style: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #333333;
+  font-size: 0.8rem;
+  text-align: start;
+}
+
+.nav-down i.misoBag.open .bag .bagTotal {
+  border-top: 2px solid #333333;
+  padding-top: 10px;
+}
+
+.nav-down i.misoBag.open .bag .checkOut {
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */

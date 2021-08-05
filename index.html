@@ -15,6 +15,11 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
     />
+    <link
+      rel="stylesheet"
+      href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+    />
+
     <title>Miso - Authentic Fusion Ramen</title>
   </head>
   <body>
@@ -32,10 +37,78 @@
             </ul>
           </li>
           <li><a href="#">The Menu</a></li>
-          <li><i class="fas fa-shopping-bag"></i></li>
+          <li>
+            <i class="fas fa-shopping-bag misoBag">
+              <div class="bag">
+                <h5 class="reciptHeader">Shopping Bag</h5>
+                <table class="bagList">
+                  <tr>
+                    <td>Items</td>
+                    <td>price</td>
+                  </tr>
+                </table>
+                <table class="bagTotal">
+                  <tr>
+                    <td>Tax</td>
+                    <td>price</td>
+                  </tr>
+                  <tr>
+                    <td>Delivery Fee</td>
+                    <td>price</td>
+                  </tr>
+                  <tr>
+                    <td>Total</td>
+                    <td>price</td>
+                  </tr>
+                </table>
+                <button class="checkOut">
+                  <h5>Checkout</h5>
+                </button>
+              </div>
+            </i>
+          </li>
         </ul>
+        <div class="misoBurger">
+          <i class="fas fa-shopping-bag misoBag">
+            <div class="bag">
+              <h5 class="reciptHeader">Shopping Bag</h5>
+              <table class="bagList">
+                <tr>
+                  <td>Items</td>
+                  <td>price</td>
+                </tr>
+              </table>
+              <table class="bagTotal">
+                <tr>
+                  <td>Tax</td>
+                  <td>price</td>
+                </tr>
+                <tr>
+                  <td>Delivery Fee</td>
+                  <td>price</td>
+                </tr>
+                <tr>
+                  <td>Total</td>
+                  <td>price</td>
+                </tr>
+              </table>
+              <button class="checkOut">
+                <h5>Checkout</h5>
+              </button>
+            </div>
+          </i>
+          <div class="hamSelect">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
       </nav>
     </header>
+    <main>
+      <h2 class="misoHeader"></h2>
+    </main>
   </body>
+  <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
   <script src="/js/script.js"></script>
 </html>

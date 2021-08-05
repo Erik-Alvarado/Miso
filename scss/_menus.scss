@@ -3,14 +3,15 @@
     background-color: $misoRed;
     width: 100%;
     display: flex;
-    padding: 0 40px;
+    padding: 0 35px;
     justify-content: space-between;
     position: relative;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+
     .navLogo {
       cursor: pointer;
       width: 100px;
-      padding: 10px 0;
+      padding: 10px 0 5px;
     }
     .misoLinks {
       cursor: pointer;
@@ -19,6 +20,9 @@
       font-family: "Thirsty Soft Regular";
       font-size: 1.5rem;
       align-items: center;
+      @include breakpoint-down(small) {
+        z-index: -1;
+      }
       a {
         text-decoration: none;
         color: $accentWhite;
@@ -32,9 +36,24 @@
       }
       i {
         color: $accentWhite;
+        transition: ease 0.3s;
+        @include breakpoint-down(small) {
+          display: none;
+        }
       }
+
       i:hover {
         color: $accentWhiteHov;
+      }
+      @include breakpoint-down(small) {
+        margin-top: -250px;
+        opacity: 0%;
+        display: flex;
+        flex-direction: column;
+        transition: ease 0.3s;
+        position: fixed;
+        left: 0;
+        right: 0;
       }
       .dropdown {
         .dropdownContent {
@@ -46,11 +65,20 @@
           text-align: center;
           padding: 10px;
           margin: 0 -12px;
+          @include breakpoint-down(small) {
+            display: contents !important;
+          }
           li {
             margin: 10px 0 0 0;
+            @include breakpoint-down(small) {
+              margin: 5px 0 0 0;
+            }
           }
           li:first-child {
             padding: 10px 0 0 0;
+          }
+          li a:hover {
+            color: $misoRed;
           }
         }
       }
@@ -59,6 +87,183 @@
         z-index: -1;
         display: flex;
         flex-direction: column;
+        @include breakpoint-down(small) {
+          display: none;
+        }
+      }
+    }
+    .misoBurger {
+      display: none;
+      @include breakpoint-down(small) {
+        display: flex;
+        align-items: center;
+      }
+      i {
+        font-size: 1.5rem;
+        color: $accentWhite;
+      }
+      i:hover {
+        color: $accentWhiteHov;
+        transition: ease 0.3s;
+      }
+      .hamSelect {
+        margin-left: 15px;
+        div {
+          background-color: $accentWhite;
+          width: 25px;
+          height: 3px;
+          transition: ease 0.3s;
+          border-radius: 50px;
+          transform-origin: left center;
+        }
+        div:nth-child(2) {
+          margin: 6px 0;
+        }
+      }
+      .hamSelect:hover div {
+        background-color: $accentWhiteHov;
+      }
+      .hamSelect.active {
+        div:nth-child(2) {
+          transition: ease 0.3s;
+          width: 0;
+          opacity: 0%;
+        }
+        div:nth-child(1) {
+          transition: ease 0.3s;
+          transform: rotate(45deg);
+        }
+        div:nth-child(3) {
+          transition: ease 0.3s;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  .misoNav.active {
+    align-items: center;
+    ul.misoLinks {
+      margin-top: 240px;
+      opacity: 100%;
+      background-color: white;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      @include breakpoint-down(small) {
+        z-index: -1;
+      }
+      @include breakpoint-up(medium) {
+        background-color: transparent;
+        width: initial;
+        height: 100%;
+        margin-top: 0;
+        align-items: center;
+      }
+      li {
+        margin-top: 5px;
+      }
+      a:hover {
+        color: $misoRed;
+      }
+      i {
+        display: none;
+        @include breakpoint-up(medium) {
+          display: block;
+        }
+      }
+      .dropdown a {
+        padding: 0;
+        @include breakpoint-up(medium) {
+          padding: 25px 0;
+        }
+      }
+      .dropdownContent {
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        box-shadow: 0 0 0 0;
+        padding: 0;
+        margin: 0;
+        @include breakpoint-up(small) {
+          display: none;
+          background-color: #fff;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+          border-radius: 0 0 10px 10px;
+          text-align: center;
+          padding: 10px;
+          margin: 15px -12px;
+        }
+        li:first-child {
+          margin: 5px 0 0 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+  i.misoBag {
+    .bag {
+      position: absolute;
+      top: -250px;
+      right: 30px;
+      transition: ease 0.3s;
+      display: flex;
+      flex-direction: column;
+      padding: 15px 15px 10px 15px;
+      z-index: -2;
+    }
+    .bagList,
+    .bagTotal {
+      td {
+        margin-left: 0;
+        padding: 0px 0 10px;
+      }
+      td:last-child {
+        text-align: end;
+      }
+    }
+    .checkOut {
+      border: 0 solid red;
+      background-color: $misoRed;
+      border-radius: 5px;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+
+      h5 {
+        color: $accentWhiteHov;
+      }
+    }
+    .checkOut:hover {
+      background-color: $misoRedHov;
+      transition: ease 0.3s;
+    }
+  }
+  i.misoBag.open {
+    color: $accentWhiteHov;
+    .bag {
+      top: 75px;
+      background-color: white;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: ease 0.3s;
+      cursor: default;
+      .reciptHeader {
+        align-self: center;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+      }
+      .bagList,
+      .bagTotal {
+        list-style: none;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+        color: $bodyBlack;
+        font-size: 0.8rem;
+        text-align: start;
+      }
+      .bagTotal {
+        border-top: 2px solid $bodyBlack;
+        padding-top: 10px;
+      }
+      .checkOut {
+        cursor: pointer;
       }
     }
   }
