@@ -390,4 +390,31 @@ body {
 .nav-down i.misoBag.open .bag .checkOut {
   cursor: pointer;
 }
+
+.misoBox {
+  position: absolute;
+}
+
+.misoBox #miso-carousel .glide__track {
+  width: 100%;
+  height: 610px;
+}
+
+@media (max-width: 56.25em) {
+  .misoBox #miso-carousel .glide__track {
+    height: 400px;
+  }
+}
+
+.misoBox #miso-carousel .glide__track .glide__slides .miso-frame {
+  border-radius: 0.16667em;
+  text-align: center;
+  width: 100vw !important;
+  height: 360px;
+  line-height: 150px;
+  color: #fff;
+  background: linear-gradient(-45deg, #ed145b, #7b31f4) !important;
+  font-size: 1em;
+  font-weight: 900;
+}
 /*# sourceMappingURL=styles.css.map */
