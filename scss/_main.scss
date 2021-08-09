@@ -1,26 +1,51 @@
 .misoBox {
   position: absolute;
-  // z-index: -3;
+  z-index: -3;
   #miso-carousel {
     .glide__track {
       width: 100%;
-      height: 610px;
-      @include breakpoint-down(small) {
-        height: 400px;
-      }
       .glide__slides {
-        // height: 100%;
+        overflow: visible;
         .miso-frame {
-          border-radius: 0.16667em;
           text-align: center;
           width: 100vw !important;
           height: 360px;
           line-height: 150px;
           color: #fff;
-          background: linear-gradient(-45deg, #ed145b, #7b31f4) !important;
+          // background: linear-gradient(-45deg, #ed145b, #7b31f4) !important;
           font-size: 1em;
           font-weight: 900;
+
+          .misoHeading {
+            color: $accentWhiteHov;
+            width: 500px;
+            line-height: 80px;
+            text-align: start;
+            margin: 100px 150px 0 auto;
+            @include breakpoint-down(small) {
+              text-align: center;
+            }
+          }
         }
+        .miso-frame:nth-child(1) {
+          background-image: url("/Assets/Images/having-fun.png");
+        }
+        .miso-frame:nth-child(2) {
+          background-image: url("/Assets/Images/restaurant.png");
+        }
+        .miso-frame:nth-child(3) {
+          background-image: url("/Assets/Images/locally-sourced.png");
+        }
+      }
+    }
+    .glide__bullets {
+      .glide__bullet--active {
+        background-color: $accentWhite;
+      }
+      .glide__bullet:hover,
+      .glide__bullet:focus {
+        border: 2px solid $accentWhite;
+        background-color: rgba(255, 255, 255, 0.5);
       }
     }
   }

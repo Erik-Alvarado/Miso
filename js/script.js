@@ -1,10 +1,6 @@
 const hamburger = document.querySelector(".hamSelect");
 const navMenu = document.querySelector(".misoNav");
-const scrollUp = document.querySelector("scroll-up");
-const scrollDown = document.querySelector("scroll-down");
 let shoppingCarts = document.querySelectorAll(".misoBag");
-
-let lastScroll = 0;
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
@@ -17,23 +13,40 @@ shoppingCarts.forEach(function (i) {
     });
   });
 
-window.addEventListener("scroll", () => {
-    const currentScroll = window.pageYOffset;
-    if (currentScroll <= 0) {
-        body.classList.remove(scrollUp);
-        return;
+  let didScroll;
+  let lastScrollTop = 0;
+  const delta = 5;
+  const navbarHeight = $("header").outerHeight();
+  
+  $(window).scroll(function (event) {
+    didScroll = true;
+  });
+  
+  setInterval(function () {
+    if (didScroll) {
+      hasScrolled();
+      didScroll = false;
     }
-
-    if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
-        body.classList.remove(scrollUp);
-        body.classList.add(scrolldown);
-    } else if (
-        currentScroll < lastScroll &&
-        body.classList.contains(scrollDown)
-    ){
-        body.classList.remove(scrollDown);
-        body.classList.add(scrollUp);
+  }, 250);
+  
+  function hasScrolled() {
+    const st = $(this).scrollTop();
+  
+    // Make sure they scroll more than delta
+    if (Math.abs(lastScrollTop - st) <= delta) return;
+  
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight) {
+      // Scroll Down
+      $("header").removeClass("nav-down").addClass("nav-up");
+    } else {
+      // Scroll Up
+      if (st + $(window).height() < $(document).height()) {
+        $("header").removeClass("nav-up").addClass("nav-down");
+      }
     }
-    lastScroll = currentScroll
-})
+  
+    lastScrollTop = st;
+  }
 

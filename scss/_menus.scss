@@ -1,11 +1,15 @@
-.nav-down {
+header {
+  width: 100%;
+  height: 80px;
+  top: 0;
+  transition: ease 0.3s;
+  position: fixed;
   .misoNav {
     background-color: $misoRed;
-    width: 100%;
-    display: flex;
-    padding: 0 35px;
-    justify-content: space-between;
     position: relative;
+    padding: 0 35px;
+    display: flex;
+    justify-content: space-between;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 
     .navLogo {
@@ -209,9 +213,21 @@
       flex-direction: column;
       padding: 15px 15px 10px 15px;
       z-index: -2;
+      background-color: white;
+      border-radius: 0 0 10px 10px;
+    }
+    .bagTotal {
+      border-top: 2px solid $bodyBlack;
+      padding-top: 10px;
     }
     .bagList,
     .bagTotal {
+      list-style: none;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      color: $bodyBlack;
+      font-size: 0.8rem;
+      text-align: start;
       td {
         margin-left: 0;
         padding: 0px 0 10px;
@@ -219,6 +235,11 @@
       td:last-child {
         text-align: end;
       }
+    }
+    .reciptHeader {
+      align-self: center;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
     }
     .checkOut {
       border: 0 solid red;
@@ -239,32 +260,18 @@
     color: $accentWhiteHov;
     .bag {
       top: 75px;
-      background-color: white;
-      border-radius: 0 0 10px 10px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
       transition: ease 0.3s;
       cursor: default;
-      .reciptHeader {
-        align-self: center;
-        font-size: 1.5rem;
-        margin-bottom: 15px;
-      }
-      .bagList,
-      .bagTotal {
-        list-style: none;
-        font-family: "Open Sans", sans-serif;
-        font-weight: 400;
-        color: $bodyBlack;
-        font-size: 0.8rem;
-        text-align: start;
-      }
-      .bagTotal {
-        border-top: 2px solid $bodyBlack;
-        padding-top: 10px;
-      }
       .checkOut {
         cursor: pointer;
       }
     }
+  }
+}
+.nav-up {
+  top: -100px;
+  .misoBag .bag {
+    top: -250px !important;
   }
 }

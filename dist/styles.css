@@ -54,23 +54,30 @@ body {
   color: #333333;
 }
 
-.nav-down .misoNav {
-  background-color: #ff4a4a;
+header {
   width: 100%;
-  display: flex;
-  padding: 0 35px;
-  justify-content: space-between;
+  height: 80px;
+  top: 0;
+  transition: ease 0.3s;
+  position: fixed;
+}
+
+header .misoNav {
+  background-color: #ff4a4a;
   position: relative;
+  padding: 0 35px;
+  display: flex;
+  justify-content: space-between;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-.nav-down .misoNav .navLogo {
+header .misoNav .navLogo {
   cursor: pointer;
   width: 100px;
   padding: 10px 0 5px;
 }
 
-.nav-down .misoNav .misoLinks {
+header .misoNav .misoLinks {
   cursor: pointer;
   list-style: none;
   display: flex;
@@ -80,42 +87,42 @@ body {
 }
 
 @media (max-width: 56.25em) {
-  .nav-down .misoNav .misoLinks {
+  header .misoNav .misoLinks {
     z-index: -1;
   }
 }
 
-.nav-down .misoNav .misoLinks a {
+header .misoNav .misoLinks a {
   text-decoration: none;
   color: #ffb5b5;
   padding: 25px 0;
 }
 
-.nav-down .misoNav .misoLinks a:hover {
+header .misoNav .misoLinks a:hover {
   color: #f2f2f2;
 }
 
-.nav-down .misoNav .misoLinks li {
+header .misoNav .misoLinks li {
   margin-left: 36px;
 }
 
-.nav-down .misoNav .misoLinks i {
+header .misoNav .misoLinks i {
   color: #ffb5b5;
   transition: ease 0.3s;
 }
 
 @media (max-width: 56.25em) {
-  .nav-down .misoNav .misoLinks i {
+  header .misoNav .misoLinks i {
     display: none;
   }
 }
 
-.nav-down .misoNav .misoLinks i:hover {
+header .misoNav .misoLinks i:hover {
   color: #f2f2f2;
 }
 
 @media (max-width: 56.25em) {
-  .nav-down .misoNav .misoLinks {
+  header .misoNav .misoLinks {
     margin-top: -250px;
     opacity: 0%;
     display: flex;
@@ -127,7 +134,7 @@ body {
   }
 }
 
-.nav-down .misoNav .misoLinks .dropdown .dropdownContent {
+header .misoNav .misoLinks .dropdown .dropdownContent {
   list-style: none;
   display: none;
   background-color: #fff;
@@ -139,30 +146,30 @@ body {
 }
 
 @media (max-width: 56.25em) {
-  .nav-down .misoNav .misoLinks .dropdown .dropdownContent {
+  header .misoNav .misoLinks .dropdown .dropdownContent {
     display: contents !important;
   }
 }
 
-.nav-down .misoNav .misoLinks .dropdown .dropdownContent li {
+header .misoNav .misoLinks .dropdown .dropdownContent li {
   margin: 10px 0 0 0;
 }
 
 @media (max-width: 56.25em) {
-  .nav-down .misoNav .misoLinks .dropdown .dropdownContent li {
+  header .misoNav .misoLinks .dropdown .dropdownContent li {
     margin: 5px 0 0 0;
   }
 }
 
-.nav-down .misoNav .misoLinks .dropdown .dropdownContent li:first-child {
+header .misoNav .misoLinks .dropdown .dropdownContent li:first-child {
   padding: 10px 0 0 0;
 }
 
-.nav-down .misoNav .misoLinks .dropdown .dropdownContent li a:hover {
+header .misoNav .misoLinks .dropdown .dropdownContent li a:hover {
   color: #ff4a4a;
 }
 
-.nav-down .misoNav .misoLinks .dropdown:hover .dropdownContent {
+header .misoNav .misoLinks .dropdown:hover .dropdownContent {
   position: absolute;
   z-index: -1;
   display: flex;
@@ -170,37 +177,37 @@ body {
 }
 
 @media (max-width: 56.25em) {
-  .nav-down .misoNav .misoLinks .dropdown:hover .dropdownContent {
+  header .misoNav .misoLinks .dropdown:hover .dropdownContent {
     display: none;
   }
 }
 
-.nav-down .misoNav .misoBurger {
+header .misoNav .misoBurger {
   display: none;
 }
 
 @media (max-width: 56.25em) {
-  .nav-down .misoNav .misoBurger {
+  header .misoNav .misoBurger {
     display: flex;
     align-items: center;
   }
 }
 
-.nav-down .misoNav .misoBurger i {
+header .misoNav .misoBurger i {
   font-size: 1.5rem;
   color: #ffb5b5;
 }
 
-.nav-down .misoNav .misoBurger i:hover {
+header .misoNav .misoBurger i:hover {
   color: #f2f2f2;
   transition: ease 0.3s;
 }
 
-.nav-down .misoNav .misoBurger .hamSelect {
+header .misoNav .misoBurger .hamSelect {
   margin-left: 15px;
 }
 
-.nav-down .misoNav .misoBurger .hamSelect div {
+header .misoNav .misoBurger .hamSelect div {
   background-color: #ffb5b5;
   width: 25px;
   height: 3px;
@@ -209,35 +216,35 @@ body {
   transform-origin: left center;
 }
 
-.nav-down .misoNav .misoBurger .hamSelect div:nth-child(2) {
+header .misoNav .misoBurger .hamSelect div:nth-child(2) {
   margin: 6px 0;
 }
 
-.nav-down .misoNav .misoBurger .hamSelect:hover div {
+header .misoNav .misoBurger .hamSelect:hover div {
   background-color: #f2f2f2;
 }
 
-.nav-down .misoNav .misoBurger .hamSelect.active div:nth-child(2) {
+header .misoNav .misoBurger .hamSelect.active div:nth-child(2) {
   transition: ease 0.3s;
   width: 0;
   opacity: 0%;
 }
 
-.nav-down .misoNav .misoBurger .hamSelect.active div:nth-child(1) {
+header .misoNav .misoBurger .hamSelect.active div:nth-child(1) {
   transition: ease 0.3s;
   transform: rotate(45deg);
 }
 
-.nav-down .misoNav .misoBurger .hamSelect.active div:nth-child(3) {
+header .misoNav .misoBurger .hamSelect.active div:nth-child(3) {
   transition: ease 0.3s;
   transform: rotate(-45deg);
 }
 
-.nav-down .misoNav.active {
+header .misoNav.active {
   align-items: center;
 }
 
-.nav-down .misoNav.active ul.misoLinks {
+header .misoNav.active ul.misoLinks {
   margin-top: 240px;
   opacity: 100%;
   background-color: white;
@@ -246,13 +253,13 @@ body {
 }
 
 @media (max-width: 56.25em) {
-  .nav-down .misoNav.active ul.misoLinks {
+  header .misoNav.active ul.misoLinks {
     z-index: -1;
   }
 }
 
 @media (min-width: 56.25em) {
-  .nav-down .misoNav.active ul.misoLinks {
+  header .misoNav.active ul.misoLinks {
     background-color: transparent;
     width: initial;
     height: 100%;
@@ -261,35 +268,35 @@ body {
   }
 }
 
-.nav-down .misoNav.active ul.misoLinks li {
+header .misoNav.active ul.misoLinks li {
   margin-top: 5px;
 }
 
-.nav-down .misoNav.active ul.misoLinks a:hover {
+header .misoNav.active ul.misoLinks a:hover {
   color: #ff4a4a;
 }
 
-.nav-down .misoNav.active ul.misoLinks i {
+header .misoNav.active ul.misoLinks i {
   display: none;
 }
 
 @media (min-width: 56.25em) {
-  .nav-down .misoNav.active ul.misoLinks i {
+  header .misoNav.active ul.misoLinks i {
     display: block;
   }
 }
 
-.nav-down .misoNav.active ul.misoLinks .dropdown a {
+header .misoNav.active ul.misoLinks .dropdown a {
   padding: 0;
 }
 
 @media (min-width: 56.25em) {
-  .nav-down .misoNav.active ul.misoLinks .dropdown a {
+  header .misoNav.active ul.misoLinks .dropdown a {
     padding: 25px 0;
   }
 }
 
-.nav-down .misoNav.active ul.misoLinks .dropdownContent {
+header .misoNav.active ul.misoLinks .dropdownContent {
   display: flex;
   flex-direction: column;
   background-color: transparent;
@@ -299,7 +306,7 @@ body {
 }
 
 @media (min-width: 39.9375em) {
-  .nav-down .misoNav.active ul.misoLinks .dropdownContent {
+  header .misoNav.active ul.misoLinks .dropdownContent {
     display: none;
     background-color: #fff;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
@@ -310,12 +317,12 @@ body {
   }
 }
 
-.nav-down .misoNav.active ul.misoLinks .dropdownContent li:first-child {
+header .misoNav.active ul.misoLinks .dropdownContent li:first-child {
   margin: 5px 0 0 0;
   padding: 0;
 }
 
-.nav-down i.misoBag .bag {
+header i.misoBag .bag {
   position: absolute;
   top: -250px;
   right: 30px;
@@ -324,56 +331,17 @@ body {
   flex-direction: column;
   padding: 15px 15px 10px 15px;
   z-index: -2;
-}
-
-.nav-down i.misoBag .bagList td,
-.nav-down i.misoBag .bagTotal td {
-  margin-left: 0;
-  padding: 0px 0 10px;
-}
-
-.nav-down i.misoBag .bagList td:last-child,
-.nav-down i.misoBag .bagTotal td:last-child {
-  text-align: end;
-}
-
-.nav-down i.misoBag .checkOut {
-  border: 0 solid red;
-  background-color: #ff4a4a;
-  border-radius: 5px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-}
-
-.nav-down i.misoBag .checkOut h5 {
-  color: #f2f2f2;
-}
-
-.nav-down i.misoBag .checkOut:hover {
-  background-color: #e64242;
-  transition: ease 0.3s;
-}
-
-.nav-down i.misoBag.open {
-  color: #f2f2f2;
-}
-
-.nav-down i.misoBag.open .bag {
-  top: 75px;
   background-color: white;
   border-radius: 0 0 10px 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  transition: ease 0.3s;
-  cursor: default;
 }
 
-.nav-down i.misoBag.open .bag .reciptHeader {
-  align-self: center;
-  font-size: 1.5rem;
-  margin-bottom: 15px;
+header i.misoBag .bagTotal {
+  border-top: 2px solid #333333;
+  padding-top: 10px;
 }
 
-.nav-down i.misoBag.open .bag .bagList,
-.nav-down i.misoBag.open .bag .bagTotal {
+header i.misoBag .bagList,
+header i.misoBag .bagTotal {
   list-style: none;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
@@ -382,39 +350,124 @@ body {
   text-align: start;
 }
 
-.nav-down i.misoBag.open .bag .bagTotal {
-  border-top: 2px solid #333333;
-  padding-top: 10px;
+header i.misoBag .bagList td,
+header i.misoBag .bagTotal td {
+  margin-left: 0;
+  padding: 0px 0 10px;
 }
 
-.nav-down i.misoBag.open .bag .checkOut {
+header i.misoBag .bagList td:last-child,
+header i.misoBag .bagTotal td:last-child {
+  text-align: end;
+}
+
+header i.misoBag .reciptHeader {
+  align-self: center;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+header i.misoBag .checkOut {
+  border: 0 solid red;
+  background-color: #ff4a4a;
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+header i.misoBag .checkOut h5 {
+  color: #f2f2f2;
+}
+
+header i.misoBag .checkOut:hover {
+  background-color: #e64242;
+  transition: ease 0.3s;
+}
+
+header i.misoBag.open {
+  color: #f2f2f2;
+}
+
+header i.misoBag.open .bag {
+  top: 75px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: ease 0.3s;
+  cursor: default;
+}
+
+header i.misoBag.open .bag .checkOut {
   cursor: pointer;
+}
+
+.nav-up {
+  top: -100px;
+}
+
+.nav-up .misoBag .bag {
+  top: -250px !important;
 }
 
 .misoBox {
   position: absolute;
+  z-index: -3;
 }
 
 .misoBox #miso-carousel .glide__track {
   width: 100%;
-  height: 610px;
 }
 
-@media (max-width: 56.25em) {
-  .misoBox #miso-carousel .glide__track {
-    height: 400px;
-  }
+.misoBox #miso-carousel .glide__track .glide__slides {
+  overflow: visible;
 }
 
 .misoBox #miso-carousel .glide__track .glide__slides .miso-frame {
-  border-radius: 0.16667em;
   text-align: center;
   width: 100vw !important;
   height: 360px;
   line-height: 150px;
   color: #fff;
-  background: linear-gradient(-45deg, #ed145b, #7b31f4) !important;
   font-size: 1em;
   font-weight: 900;
+}
+
+.misoBox #miso-carousel .glide__track .glide__slides .miso-frame .misoHeading {
+  color: #f2f2f2;
+  width: 500px;
+  line-height: 80px;
+  text-align: start;
+  margin: 100px 150px 0 auto;
+}
+
+@media (max-width: 56.25em) {
+  .misoBox #miso-carousel .glide__track .glide__slides .miso-frame .misoHeading {
+    text-align: center;
+  }
+}
+
+.misoBox #miso-carousel .glide__track .glide__slides .miso-frame:nth-child(1) {
+  background-image: url("/Assets/Images/having-fun.png");
+}
+
+.misoBox #miso-carousel .glide__track .glide__slides .miso-frame:nth-child(2) {
+  background-image: url("/Assets/Images/restaurant.png");
+}
+
+.misoBox #miso-carousel .glide__track .glide__slides .miso-frame:nth-child(3) {
+  background-image: url("/Assets/Images/locally-sourced.png");
+}
+
+.misoBox #miso-carousel .glide__bullets .glide__bullet--active {
+  background-color: #ffb5b5;
+}
+
+.misoBox #miso-carousel .glide__bullets .glide__bullet:hover,
+.misoBox #miso-carousel .glide__bullets .glide__bullet:focus {
+  border: 2px solid #ffb5b5;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.misoFoot {
+  background-color: #ff4a4a;
+  height: 70px;
+  display: flex;
 }
 /*# sourceMappingURL=styles.css.map */

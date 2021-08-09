@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/dist/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
+    />
+
+    <title>Miso - Authentic Fusion Ramen</title>
+  </head>
+  <body>
+    <header class="nav-down">
+      <nav class="misoNav">
+        <a class="navLogo" href="/index.html"
+          ><img src="/Assets/SVG/misoLogo.svg" alt="Miso Logo"
+        /></a>
+        <ul class="misoLinks">
+          <li class="dropdown">
+            <a href="#">About Us</a>
+            <ul class="dropdownContent">
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </li>
+          <li><a href="#">The Menu</a></li>
+          <li>
+            <i class="fas fa-shopping-bag misoBag">
+              <div class="bag">
+                <h5 class="reciptHeader">Shopping Bag</h5>
+                <table class="bagList">
+                  <tr>
+                    <td>Items</td>
+                    <td>price</td>
+                  </tr>
+                </table>
+                <table class="bagTotal">
+                  <tr>
+                    <td>Tax</td>
+                    <td>price</td>
+                  </tr>
+                  <tr>
+                    <td>Delivery Fee</td>
+                    <td>price</td>
+                  </tr>
+                  <tr>
+                    <td>Total</td>
+                    <td>price</td>
+                  </tr>
+                </table>
+                <button class="checkOut">
+                  <h5>Checkout</h5>
+                </button>
+              </div>
+            </i>
+          </li>
+        </ul>
+        <div class="misoBurger">
+          <i class="fas fa-shopping-bag misoBag">
+            <div class="bag">
+              <h5 class="reciptHeader">Shopping Bag</h5>
+              <table class="bagList">
+                <tr>
+                  <td>Items</td>
+                  <td>price</td>
+                </tr>
+              </table>
+              <table class="bagTotal">
+                <tr>
+                  <td>Tax</td>
+                  <td>price</td>
+                </tr>
+                <tr>
+                  <td>Delivery Fee</td>
+                  <td>price</td>
+                </tr>
+                <tr>
+                  <td>Total</td>
+                  <td>price</td>
+                </tr>
+              </table>
+              <button class="checkOut">
+                <h5>Checkout</h5>
+              </button>
+            </div>
+          </i>
+          <div class="hamSelect">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="misoBox">
+        <div id="miso-carousel" class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="miso-frame glide__slide">1</li>
+              <li class="miso-frame glide__slide">2</li>
+              <li class="miso-frame glide__slide">3</li>
+            </ul>
+          </div>
+
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+  <script>
+    new Glide(".glide").mount();
+  </script>
+  <script src="/js/glide.js"></script>
+  <script src="/js/script.js"></script>
+</html>
