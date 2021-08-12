@@ -4,6 +4,7 @@ header {
   top: 0;
   transition: ease 0.3s;
   position: fixed;
+  z-index: 3;
   .misoNav {
     background-color: $misoRed;
     position: relative;

@@ -1,5 +1,8 @@
-.misoFoot {
+footer {
   background-color: $misoRed;
-  height: 70px;
+  height: 80px;
   display: flex;
+  .misoFoot {
+    justify-content: center;
+  }
 }
