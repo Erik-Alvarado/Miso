@@ -57,6 +57,10 @@
       }
     }
   }
+  .heroMiso {
+    height: 700px;
+    background-color: red;
+  }
 }
 .misoFeature {
   display: flex;
@@ -116,6 +120,24 @@
   }
 }
 .misoSignature {
+  .signature {
+    display: flex;
+    justify-content: center;
+    div:first-child,
+    div:last-child {
+      height: 5px;
+      width: 25%;
+      border-radius: 50px;
+      background-color: $bodyBlack;
+      align-self: center;
+      @include breakpoint-down(x-small) {
+        width: 10%;
+      }
+    }
+    div:nth-child(2) {
+      margin: 0 20px;
+    }
+  }
   #miso-signature {
     .glide__track {
       margin: 0 50px;
@@ -125,17 +147,31 @@
         .miso-frame {
           height: 300px;
           background: $misoRed;
-          border-radius: 0.16667em;
           display: flex;
           justify-content: center;
+          border-radius: 0.16667em;
+          @include breakpoint-down(medium) {
+            height: 200px;
+          }
+          @include breakpoint-down(small) {
+            height: 150px;
+          }
+          @include breakpoint-down(x-small) {
+            height: 125px;
+          }
           .ramen {
+            border-radius: 0.16667em;
             width: 100%;
             height: 100%;
+            background-position: center;
+            background-size: cover;
+            transition: ease 0.3s;
             .ramenOverlay {
               display: none;
             }
           }
           .ramen:hover {
+            transform: scale(1.1);
             .ramenOverlay {
               display: flex;
               align-items: center;
@@ -144,36 +180,70 @@
               height: 100%;
               background-color: $ramenHover;
               border-radius: 0.16667em;
+              @include breakpoint-down(small) {
+                padding: 0 15px;
+              }
 
               p {
                 color: $accentWhiteHov;
                 text-align: center;
+                padding: 0 15px;
+                @include breakpoint-down(medium) {
+                  font-size: 14px;
+                }
+                @include breakpoint-down(small) {
+                  font-size: 12px;
+                  line-height: 12px;
+                }
+                @include breakpoint-down(x-small) {
+                  display: none;
+                }
               }
               h3,
               h4 {
                 color: $accentWhiteHov;
+                text-align: center;
+                @include breakpoint-down(small) {
+                  font-size: 1.5rem;
+                  line-height: 30px;
+                }
               }
             }
           }
         }
         .miso-frame:nth-child(1) {
+          .ramen {
+            background-image: url("/Assets/Images/Spc\ Ramen.png");
+          }
         }
         .miso-frame:nth-child(2) {
+          .ramen {
+            background-image: url("/Assets/Images/INT\ Ramen.png");
+          }
         }
         .miso-frame:nth-child(3) {
+          .ramen {
+            background-image: url("/Assets/Images/LUK\ Ramen.png");
+          }
         }
         .miso-frame:nth-child(4) {
+          .ramen {
+            background-image: url("/Assets/Images/SP\ Ramen.png");
+          }
         }
       }
-      .glide__bullets {
-        .glide__bullet {
-          background: $bodyBlack;
-        }
-        .glide__bullet:focus,
-        .glide__bullet:hover {
-          background: $signatureAccentHov;
-          border: 0px solid transparent;
-        }
+    }
+    .misoBull {
+      transform: translateX(-25%);
+      .glide__bullet {
+        background-color: $bodyBlack;
+      }
+      .glide__bullet:focus {
+        background-color: $signatureAccentHov;
+        border: 0px solid transparent;
+      }
+      .glide__bullet:hover {
+        border: 2px solid $glideAccentHov;
       }
     }
   }

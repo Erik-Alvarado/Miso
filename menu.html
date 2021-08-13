@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/dist/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
+    />
+
+    <title>Miso - Authentic Fusion Ramen</title>
+  </head>
+  <body>
+    <header class="nav-down">
+      <nav class="misoNav">
+        <a class="navLogo" href="/index.html"
+          ><img src="/Assets/SVG/misoLogo.svg" alt="Miso Logo"
+        /></a>
+        <ul class="misoLinks">
+          <li class="dropdown">
+            <a href="/about.html">About Us</a>
+            <ul class="dropdownContent">
+              <li><a href="/about.html">Our Story</a></li>
+              <li><a href="/about.html#misoQuest">FAQ</a></li>
+            </ul>
+          </li>
+          <li><a href="/menu.html">The Menu</a></li>
+          <li>
+            <i class="fas fa-shopping-bag misoBag">
+              <div class="bag">
+                <h5 class="reciptHeader">Shopping Bag</h5>
+                <table class="bagList">
+                  <tr>
+                    <td>Items</td>
+                    <td>price</td>
+                  </tr>
+                </table>
+                <table class="bagTotal">
+                  <tr>
+                    <td>Tax</td>
+                    <td>price</td>
+                  </tr>
+                  <tr>
+                    <td>Delivery Fee</td>
+                    <td>price</td>
+                  </tr>
+                  <tr>
+                    <td>Total</td>
+                    <td>price</td>
+                  </tr>
+                </table>
+                <button class="checkOut">
+                  <h5>Checkout</h5>
+                </button>
+              </div>
+            </i>
+          </li>
+        </ul>
+        <div class="misoBurger">
+          <i class="fas fa-shopping-bag misoBag">
+            <div class="bag">
+              <h5 class="reciptHeader">Shopping Bag</h5>
+              <table class="bagList">
+                <tr>
+                  <td>Items</td>
+                  <td>price</td>
+                </tr>
+              </table>
+              <table class="bagTotal">
+                <tr>
+                  <td>Tax</td>
+                  <td>price</td>
+                </tr>
+                <tr>
+                  <td>Delivery Fee</td>
+                  <td>price</td>
+                </tr>
+                <tr>
+                  <td>Total</td>
+                  <td>price</td>
+                </tr>
+              </table>
+              <button class="checkOut">
+                <h5>Checkout</h5>
+              </button>
+            </div>
+          </i>
+          <div class="hamSelect">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="misoBox">
+        <div id="miso-carousel" class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="miso-frame glide__slide">
+                <h1 class="misoHeading">Classic Appeal Fusion Taste</h1>
+              </li>
+              <li class="miso-frame glide__slide">
+                <h1 class="misoHeading">Locally Sourced Goodness</h1>
+              </li>
+              <li class="miso-frame glide__slide">
+                <h1 class="misoHeading">Make Memories Eat Ramen</h1>
+              </li>
+            </ul>
+          </div>
+
+          <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+          </div>
+        </div>
+      </section>
+      <section class="misoFeature">
+        <div class="misoBowl"><img src="/Assets/Images/ramen.png" /></div>
+        <div class="misoText">
+          <h1>Making Ramen Since 1993</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Reprehenderit sint eum laboriosam perferendis veniam impedit placeat
+            ducimus error laudantium obcaecati animi, dolore esse quam, dicta
+            quibusdam velit, adipisci dignissimos perspiciatis sunt quia eius.
+            Possimus ex, quia labore ipsum eaque blanditiis beatae omnis
+            quibusdam necessitatibus totam nihil at eius vitae molestias!
+          </p>
+          <a href="/about.html" class="misoButton">Learn More</a>
+        </div>
+      </section>
+      <section class="misoSignature">
+        <div class="signature">
+          <div></div>
+          <div><h3>Signature Ramen</h3></div>
+          <div></div>
+        </div>
+        <div id="miso-signature" class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="miso-frame glide__slide">
+                <div class="ramen">
+                  <div class="ramenOverlay">
+                    <h4>Spe. Attack Ramen</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Voluptas dolorem doloremque atque dicta ad ratione.
+                    </p>
+                    <h3 class="ramenPrice">$18</h3>
+                  </div>
+                </div>
+              </li>
+              <li class="miso-frame glide__slide">
+                <div class="ramen">
+                  <div class="ramenOverlay">
+                    <h4>Int Ramen</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Voluptas dolorem doloremque atque dicta ad ratione.
+                    </p>
+                    <h3 class="ramenPrice">$12</h3>
+                  </div>
+                </div>
+              </li>
+              <li class="miso-frame glide__slide">
+                <div class="ramen">
+                  <div class="ramenOverlay">
+                    <h4>Luk Ramen</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Voluptas dolorem doloremque atque dicta ad ratione.
+                    </p>
+                    <h3 class="ramenPrice">$12</h3>
+                  </div>
+                </div>
+              </li>
+              <li class="miso-frame glide__slide">
+                <div class="ramen">
+                  <div class="ramenOverlay">
+                    <h4>SP Ramen</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Voluptas dolorem doloremque atque dicta ad ratione.
+                    </p>
+                    <h3 class="ramenPrice">$14</h3>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="glide__bullets misoBull" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="misoFoot">
+        <h4>Catch Us On Our Socials</h4>
+        <div class="footSocial">
+          <i class="fab fa-twitter-square"></i>
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </section>
+    </footer>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+  <script>
+    new Glide(".glide").mount();
+  </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="/js/glide.js"></script>
+  <script src="/js/script.js"></script>
+</html>

@@ -473,6 +473,11 @@ header i.misoBag.open .bag .checkOut {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
+.misoBox .heroMiso {
+  height: 700px;
+  background-color: red;
+}
+
 .misoFeature {
   display: flex;
   justify-content: center;
@@ -551,6 +556,31 @@ header i.misoBag.open .bag .checkOut {
   color: #f2f2f2;
 }
 
+.misoSignature .signature {
+  display: flex;
+  justify-content: center;
+}
+
+.misoSignature .signature div:first-child,
+.misoSignature .signature div:last-child {
+  height: 5px;
+  width: 25%;
+  border-radius: 50px;
+  background-color: #333333;
+  align-self: center;
+}
+
+@media (max-width: 39.9375em) {
+  .misoSignature .signature div:first-child,
+  .misoSignature .signature div:last-child {
+    width: 10%;
+  }
+}
+
+.misoSignature .signature div:nth-child(2) {
+  margin: 0 20px;
+}
+
 .misoSignature #miso-signature .glide__track {
   margin: 0 50px;
 }
@@ -563,18 +593,44 @@ header i.misoBag.open .bag .checkOut {
 .misoSignature #miso-signature .glide__track .glide__slides .miso-frame {
   height: 300px;
   background: #ff4a4a;
-  border-radius: 0.16667em;
   display: flex;
   justify-content: center;
+  border-radius: 0.16667em;
+}
+
+@media (max-width: 63.9375em) {
+  .misoSignature #miso-signature .glide__track .glide__slides .miso-frame {
+    height: 200px;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .misoSignature #miso-signature .glide__track .glide__slides .miso-frame {
+    height: 150px;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .misoSignature #miso-signature .glide__track .glide__slides .miso-frame {
+    height: 125px;
+  }
 }
 
 .misoSignature #miso-signature .glide__track .glide__slides .miso-frame .ramen {
+  border-radius: 0.16667em;
   width: 100%;
   height: 100%;
+  background-position: center;
+  background-size: cover;
+  transition: ease 0.3s;
 }
 
 .misoSignature #miso-signature .glide__track .glide__slides .miso-frame .ramen .ramenOverlay {
   display: none;
+}
+
+.misoSignature #miso-signature .glide__track .glide__slides .miso-frame .ramen:hover {
+  transform: scale(1.1);
 }
 
 .misoSignature #miso-signature .glide__track .glide__slides .miso-frame .ramen:hover .ramenOverlay {
@@ -587,33 +643,103 @@ header i.misoBag.open .bag .checkOut {
   border-radius: 0.16667em;
 }
 
+@media (max-width: 56.25em) {
+  .misoSignature #miso-signature .glide__track .glide__slides .miso-frame .ramen:hover .ramenOverlay {
+    padding: 0 15px;
+  }
+}
+
 .misoSignature #miso-signature .glide__track .glide__slides .miso-frame .ramen:hover .ramenOverlay p {
   color: #f2f2f2;
   text-align: center;
+  padding: 0 15px;
+}
+
+@media (max-width: 63.9375em) {
+  .misoSignature #miso-signature .glide__track .glide__slides .miso-frame .ramen:hover .ramenOverlay p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .misoSignature #miso-signature .glide__track .glide__slides .miso-frame .ramen:hover .ramenOverlay p {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .misoSignature #miso-signature .glide__track .glide__slides .miso-frame .ramen:hover .ramenOverlay p {
+    display: none;
+  }
 }
 
 .misoSignature #miso-signature .glide__track .glide__slides .miso-frame .ramen:hover .ramenOverlay h3,
 .misoSignature #miso-signature .glide__track .glide__slides .miso-frame .ramen:hover .ramenOverlay h4 {
   color: #f2f2f2;
+  text-align: center;
 }
 
-.misoSignature #miso-signature .glide__track .glide__bullets .glide__bullet {
-  background: #333333;
+@media (max-width: 56.25em) {
+  .misoSignature #miso-signature .glide__track .glide__slides .miso-frame .ramen:hover .ramenOverlay h3,
+  .misoSignature #miso-signature .glide__track .glide__slides .miso-frame .ramen:hover .ramenOverlay h4 {
+    font-size: 1.5rem;
+    line-height: 30px;
+  }
 }
 
-.misoSignature #miso-signature .glide__track .glide__bullets .glide__bullet:focus,
-.misoSignature #miso-signature .glide__track .glide__bullets .glide__bullet:hover {
-  background: #555;
+.misoSignature #miso-signature .glide__track .glide__slides .miso-frame:nth-child(1) .ramen {
+  background-image: url("/Assets/Images/Spc Ramen.png");
+}
+
+.misoSignature #miso-signature .glide__track .glide__slides .miso-frame:nth-child(2) .ramen {
+  background-image: url("/Assets/Images/INT Ramen.png");
+}
+
+.misoSignature #miso-signature .glide__track .glide__slides .miso-frame:nth-child(3) .ramen {
+  background-image: url("/Assets/Images/LUK Ramen.png");
+}
+
+.misoSignature #miso-signature .glide__track .glide__slides .miso-frame:nth-child(4) .ramen {
+  background-image: url("/Assets/Images/SP Ramen.png");
+}
+
+.misoSignature #miso-signature .misoBull {
+  transform: translateX(-25%);
+}
+
+.misoSignature #miso-signature .misoBull .glide__bullet {
+  background-color: #333333;
+}
+
+.misoSignature #miso-signature .misoBull .glide__bullet:focus {
+  background-color: #555;
   border: 0px solid transparent;
+}
+
+.misoSignature #miso-signature .misoBull .glide__bullet:hover {
+  border: 2px solid #f2f2f2c5;
 }
 
 footer {
   background-color: #ff4a4a;
   height: 80px;
-  display: flex;
 }
 
 footer .misoFoot {
-  justify-content: center;
+  padding: 5px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f2f2f2;
+}
+
+footer .misoFoot h4 {
+  color: #f2f2f2;
+  font-size: 1.5rem;
+}
+
+footer .misoFoot .footSocial {
+  font-size: 1.5rem;
 }
 /*# sourceMappingURL=styles.css.map */

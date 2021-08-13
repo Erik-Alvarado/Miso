@@ -10,9 +10,14 @@ const glideHero = new Glide('#miso-carousel', {
 glideHero.mount();
 
 const glideFeature = new Glide('#miso-signature', {
-  type: 'carousel',
+  type: 'slider',
   perView: 4,
-  gap: 20,
+  gap: 15,
+  focusAt: '0',
+  peek: {
+    before: 0,
+    after: 0
+  }
 
 })
 glideFeature.mount();
