@@ -309,8 +309,8 @@
     }
   }
 }
-#misoQuest {
-  margin: 0 25px;
+#misoQuest2 {
+  margin: 0 5px;
   .misoTips {
     overflow: hidden;
     margin-top: 25px;
@@ -365,4 +365,7 @@
   input:checked ~ .tipLabel::after {
     transform: rotateZ(90deg);
   }
+}
+
+#misoQuest {
 }
