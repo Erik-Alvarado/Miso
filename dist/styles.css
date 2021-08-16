@@ -474,8 +474,33 @@ header i.misoBag.open .bag .checkOut {
 }
 
 .misoBox .heroMiso {
-  height: 700px;
+  height: 500px;
   background-color: red;
+}
+
+.misoBox .heroMiso .misoHeading {
+  color: #f2f2f2;
+  width: 660px;
+  line-height: 120px;
+  text-align: start;
+  margin: 0px 150px 0 auto;
+  padding: 150px 0;
+  font-size: 6rem;
+}
+
+@media (max-width: 63.9375em) {
+  .misoBox .heroMiso .misoHeading {
+    text-align: center;
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .misoBox .heroMiso .misoHeading {
+    padding: 200px 0;
+    font-size: 4rem;
+    line-height: 80px;
+  }
 }
 
 .misoFeature {
@@ -556,6 +581,11 @@ header i.misoBag.open .bag .checkOut {
   color: #f2f2f2;
 }
 
+.misoSignature {
+  display: flex;
+  flex-direction: column;
+}
+
 .misoSignature .signature {
   display: flex;
   justify-content: center;
@@ -581,13 +611,16 @@ header i.misoBag.open .bag .checkOut {
   margin: 0 20px;
 }
 
-.misoSignature #miso-signature .glide__track {
-  margin: 0 50px;
+.misoSignature #miso-signature {
+  width: calc(100% - 1.5rem);
+  align-self: center;
+  max-width: 1375px;
 }
 
 .misoSignature #miso-signature .glide__track .glide__slides {
-  overflow: visible;
   padding: 1.5rem;
+  display: flex;
+  justify-content: center;
 }
 
 .misoSignature #miso-signature .glide__track .glide__slides .miso-frame {
@@ -741,5 +774,11 @@ footer .misoFoot h4 {
 
 footer .misoFoot .footSocial {
   font-size: 1.5rem;
+}
+
+footer .misoFoot .footSocial i:hover {
+  transform: scale(1.1);
+  color: #ffb5b5;
+  transition: ease 0.3s;
 }
 /*# sourceMappingURL=styles.css.map */

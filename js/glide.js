@@ -12,11 +12,11 @@ glideHero.mount();
 const glideFeature = new Glide('#miso-signature', {
   type: 'slider',
   perView: 4,
-  gap: 15,
+  gap: 10,
   focusAt: '0',
   peek: {
-    before: 0,
-    after: 0
+    before: 25,
+    after: 25
   }
 
 })

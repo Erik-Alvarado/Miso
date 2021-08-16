@@ -58,8 +58,27 @@
     }
   }
   .heroMiso {
-    height: 700px;
+    height: 500px;
     background-color: red;
+    .misoHeading {
+      color: $accentWhiteHov;
+      width: 660px;
+      line-height: 120px;
+      text-align: start;
+      margin: 0px 150px 0 auto;
+      padding: 150px 0;
+      font-size: 6rem;
+      @include breakpoint-down(medium) {
+        text-align: center;
+        font-size: 5rem;
+      }
+      @include breakpoint-down(x-small) {
+        padding: 200px 0;
+        // text-align: center;
+        font-size: 4rem;
+        line-height: 80px;
+      }
+    }
   }
 }
 .misoFeature {
@@ -120,6 +139,9 @@
   }
 }
 .misoSignature {
+  display: flex;
+  flex-direction: column;
+
   .signature {
     display: flex;
     justify-content: center;
@@ -139,11 +161,17 @@
     }
   }
   #miso-signature {
+    width: calc(100% - 1.5rem);
+    align-self: center;
+    max-width: 1375px;
+
     .glide__track {
-      margin: 0 50px;
+      // margin: 0 50px;
       .glide__slides {
-        overflow: visible;
+        // overflow: visible;
         padding: 1.5rem;
+        display: flex;
+        justify-content: center;
         .miso-frame {
           height: 300px;
           background: $misoRed;
