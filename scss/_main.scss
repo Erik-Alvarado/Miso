@@ -83,12 +83,46 @@
     }
   }
 }
+#menuMiso {
+  height: 500px;
+  display: flex;
+  margin-top: 100px;
+  justify-content: space-evenly;
+  .menuRamen {
+    width: 400px;
+    #miso-menu {
+      height: 200px;
+      .miso-frame:nth-child(1) {
+        .ramen {
+          background-image: url("/Assets/Images/menu/mae-mu-en4qp-aK1h4-unsplash.png");
+        }
+      }
+      .miso-frame:nth-child(2) {
+        .ramen {
+          background-image: url("/Assets/Images/menu/mae-mu-H5Hj8QV2Tx4-unsplash.png");
+        }
+      }
+      .miso-frame:nth-child(3) {
+        .ramen {
+          background-image: url("/Assets/Images/menu/michele-blackwell-rAyCBQTH7ws-unsplash.png");
+        }
+      }
+    }
+  }
+}
 #aboutMiso {
   margin: 25px 50px;
   @include breakpoint-down(medium) {
     flex-direction: column;
   }
-
+  @media (max-width: 375px) {
+    margin: 10px 15px;
+  }
+  h1 {
+    @media (max-width: 320px) {
+      font-size: 3.5rem;
+    }
+  }
   .misoText {
     width: 650px;
     @include breakpoint-down(medium) {
@@ -101,6 +135,115 @@
     }
   }
 }
+#misoMenu {
+  margin: 25px 50px;
+  flex-direction: column;
+  height: 400px;
+  @include breakpoint-down(medium) {
+    flex-direction: column;
+  }
+  @include breakpoint-down(x-small) {
+    margin: 10px 25px;
+  }
+  @media (max-width: 375px) {
+    margin: 10px 15px;
+  }
+  .misoSides {
+    display: flex;
+    .misoSide {
+      border-radius: 10px;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+      background-image: url("/Assets/Images/menu/edanur-agac-gDNhfxuNneM-unsplash.png");
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      width: 718px;
+      @include breakpoint-down(medium) {
+        display: none;
+      }
+    }
+  }
+  .misoText {
+    width: 650px;
+    display: flex;
+    justify-content: space-evenly;
+    @include breakpoint-down(medium) {
+      text-align: center;
+    }
+    @include breakpoint-down(x-small) {
+      padding: 0 10px;
+    }
+    p {
+      @include breakpoint-down(medium) {
+        text-align: justify;
+      }
+    }
+    .sides {
+      text-align: start;
+      list-style: none;
+      .side {
+        margin-bottom: 10px;
+        padding: 0 10px;
+        span {
+          font-family: "Thirsty Soft Regular";
+          font-weight: 500;
+        }
+      }
+    }
+    .drinks {
+      text-align: start;
+      list-style: none;
+      .drink {
+        margin-bottom: 10px;
+        padding: 0 10px;
+        span {
+          font-family: "Thirsty Soft Regular";
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .sideSig {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 15px;
+    color: $bodyBlack;
+    @media (max-width: 375px) {
+      flex-direction: column;
+    }
+    div:first-child,
+    div:last-child {
+      width: 25%;
+      height: 3px;
+      background-color: $bodyBlack;
+      border-radius: 50px;
+      @include breakpoint-down(x-small) {
+        width: 10%;
+      }
+      @media (max-width: 375px) {
+        height: 3px;
+        width: 50%;
+        margin-top: -10px;
+      }
+    }
+    div:first-child {
+      @media (max-width: 375px) {
+        width: 0;
+      }
+    }
+    div:nth-child(2) {
+      margin: 0 20px;
+      @media (max-width: 375px) {
+        text-align: center;
+      }
+    }
+    .sideHead {
+      margin: 0 10px;
+    }
+  }
+}
 .misoFeature {
   display: flex;
   justify-content: center;
@@ -110,6 +253,13 @@
   @include breakpoint-down(medium) {
     margin-top: 0;
   }
+  @include breakpoint-down(x-small) {
+    margin-bottom: 35px;
+  }
+  @media (max-width: 375px) {
+    margin-top: 15px;
+  }
+
   .misoChef {
     overflow: hidden;
     width: 765px;
@@ -153,6 +303,14 @@
         text-align: justify;
       }
     }
+    h1 {
+      @include breakpoint-down(x-small) {
+        font-size: 3.5rem;
+      }
+      @media (max-width: 320px) {
+        font-size: 3rem;
+      }
+    }
     .misoButton {
       padding: 5px 15px;
       border-radius: 50px;
@@ -174,10 +332,13 @@
 .misoSignature {
   display: flex;
   flex-direction: column;
-
+  padding: 0 20px;
   .signature {
     display: flex;
     justify-content: center;
+    @media (max-width: 375px) {
+      flex-direction: column;
+    }
     div:first-child,
     div:last-child {
       height: 5px;
@@ -188,20 +349,36 @@
       @include breakpoint-down(x-small) {
         width: 10%;
       }
+      @media (max-width: 375px) {
+        height: 3px;
+        width: 60%;
+        margin-top: -10px;
+      }
+    }
+    div:first-child {
+      @media (max-width: 375px) {
+        width: 0;
+      }
     }
     div:nth-child(2) {
       margin: 0 20px;
+      @media (max-width: 375px) {
+        text-align: center;
+      }
     }
   }
   #miso-signature {
     width: calc(100% - 1.5rem);
     align-self: center;
     max-width: 1375px;
-
+    @media (max-width: 425px) {
+      // align-self: auto;
+      max-width: 375px;
+    }
     .glide__track {
       // margin: 0 50px;
       .glide__slides {
-        // overflow: visible;
+        overflow: visible;
         padding: 1.5rem;
         display: flex;
         justify-content: center;
@@ -253,10 +430,6 @@
                   font-size: 14px;
                 }
                 @include breakpoint-down(small) {
-                  font-size: 12px;
-                  line-height: 12px;
-                }
-                @include breakpoint-down(x-small) {
                   display: none;
                 }
               }
@@ -292,6 +465,16 @@
             background-image: url("/Assets/Images/SP\ Ramen.png");
           }
         }
+        .miso-frame:nth-child(5) {
+          .ramen {
+            background-image: url("/Assets/Images/HP\ Ramen.png");
+          }
+        }
+        .miso-frame:nth-child(6) {
+          .ramen {
+            background-image: url("/Assets/Images/Spe.\ Def\ Ramen.png");
+          }
+        }
       }
     }
     .misoBull {
@@ -309,63 +492,79 @@
     }
   }
 }
-#misoQuest2 {
-  margin: 0 5px;
-  .misoTips {
-    overflow: hidden;
-    margin-top: 25px;
-    padding: 0 25px;
-    width: 100%;
-    input {
-      position: absolute;
-      opacity: 0;
-      z-index: -1;
-    }
-    .tip {
-      overflow: hidden;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      margin-bottom: 10px;
-      border-radius: 10px;
-      [type="checkbox"] {
-        box-sizing: border-box;
-        padding: 0;
-      }
-      .tipLabel {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px;
-        background-color: $accentWhiteHov;
-        cursor: pointer;
-        align-items: center;
-        transition: ease 0.5s;
-      }
-      .tipLabel::after {
-        content: "\276F";
-        width: 1em;
-        text-align: center;
-        transition: all 0.35s;
-      }
-      .tipContent {
-        max-height: 0vh;
-        padding: 0 1em;
-        color: $accentWhiteHov;
-        background: $accentWhite;
-        transition: all 0.35s;
-      }
-      input:checked ~ .tipContent {
-        max-height: 100vh;
-        padding: 1em;
-      }
-
-      input:checked ~ .tipLabel {
-        background: $accentWhite;
-      }
-    }
-  }
-  input:checked ~ .tipLabel::after {
-    transform: rotateZ(90deg);
-  }
-}
 
 #misoQuest {
+  margin: 10px 50px;
+  @media (max-width: 320px) {
+    margin: 10px 25px;
+  }
+  .aboutSig {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+      text-align: center;
+      @media (max-width: 375px) {
+        font-size: 2.5rem;
+      }
+    }
+    div {
+      background-color: $bodyBlack;
+      height: 3px;
+      width: 450px;
+      margin-top: -12px;
+      border-radius: 50px;
+      @include breakpoint-down(x-small) {
+        display: none;
+      }
+    }
+  }
+  .misoTab {
+    margin-bottom: 10px;
+    .misoLabel {
+      padding: 10px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      border: 0 solid transparent;
+      align-items: center;
+      border-radius: 10px;
+      font-family: "Thirsty Soft Regular";
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+      background-color: $glideAccent;
+      transition: all 0.3s;
+      i {
+        transition: all 0.3s;
+      }
+      &:hover {
+        background-color: $accentWhiteHov;
+      }
+      &.is-open {
+        background-color: $accentWhiteHov;
+        border-radius: 10px 10px 0 0;
+        i {
+          transform: rotateZ(90deg);
+          transition: all 0.3s;
+          margin-right: 5px;
+        }
+        .misoContent {
+          display: flex;
+        }
+      }
+    }
+    .misoContent {
+      overflow: hidden;
+      max-height: 0;
+      background-color: $glideAccent;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+      transition: max-height 0.2s ease;
+      p {
+        padding: 5px 15px;
+      }
+    }
+  }
 }

@@ -107,6 +107,12 @@ header .misoNav .misoLinks li {
   margin-left: 36px;
 }
 
+@media (max-width: 39.9375em) {
+  header .misoNav .misoLinks li {
+    margin-left: 0;
+  }
+}
+
 header .misoNav .misoLinks i {
   color: #ffb5b5;
   transition: ease 0.3s;
@@ -506,6 +512,33 @@ header i.misoBag.open .bag .checkOut {
   }
 }
 
+#menuMiso {
+  height: 500px;
+  display: flex;
+  margin-top: 100px;
+  justify-content: space-evenly;
+}
+
+#menuMiso .menuRamen {
+  width: 400px;
+}
+
+#menuMiso .menuRamen #miso-menu {
+  height: 200px;
+}
+
+#menuMiso .menuRamen #miso-menu .miso-frame:nth-child(1) .ramen {
+  background-image: url("/Assets/Images/menu/mae-mu-en4qp-aK1h4-unsplash.png");
+}
+
+#menuMiso .menuRamen #miso-menu .miso-frame:nth-child(2) .ramen {
+  background-image: url("/Assets/Images/menu/mae-mu-H5Hj8QV2Tx4-unsplash.png");
+}
+
+#menuMiso .menuRamen #miso-menu .miso-frame:nth-child(3) .ramen {
+  background-image: url("/Assets/Images/menu/michele-blackwell-rAyCBQTH7ws-unsplash.png");
+}
+
 #aboutMiso {
   margin: 25px 50px;
 }
@@ -513,6 +546,18 @@ header i.misoBag.open .bag .checkOut {
 @media (max-width: 63.9375em) {
   #aboutMiso {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 375px) {
+  #aboutMiso {
+    margin: 10px 15px;
+  }
+}
+
+@media (max-width: 320px) {
+  #aboutMiso h1 {
+    font-size: 3.5rem;
   }
 }
 
@@ -532,6 +577,163 @@ header i.misoBag.open .bag .checkOut {
   }
 }
 
+#misoMenu {
+  margin: 25px 50px;
+  flex-direction: column;
+  height: 400px;
+}
+
+@media (max-width: 63.9375em) {
+  #misoMenu {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  #misoMenu {
+    margin: 10px 25px;
+  }
+}
+
+@media (max-width: 375px) {
+  #misoMenu {
+    margin: 10px 15px;
+  }
+}
+
+#misoMenu .misoSides {
+  display: flex;
+}
+
+#misoMenu .misoSides .misoSide {
+  border-radius: 10px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  background-image: url("/Assets/Images/menu/edanur-agac-gDNhfxuNneM-unsplash.png");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 718px;
+}
+
+@media (max-width: 63.9375em) {
+  #misoMenu .misoSides .misoSide {
+    display: none;
+  }
+}
+
+#misoMenu .misoText {
+  width: 650px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 63.9375em) {
+  #misoMenu .misoText {
+    text-align: center;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  #misoMenu .misoText {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  #misoMenu .misoText p {
+    text-align: justify;
+  }
+}
+
+#misoMenu .misoText .sides {
+  text-align: start;
+  list-style: none;
+}
+
+#misoMenu .misoText .sides .side {
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+#misoMenu .misoText .sides .side span {
+  font-family: "Thirsty Soft Regular";
+  font-weight: 500;
+}
+
+#misoMenu .misoText .drinks {
+  text-align: start;
+  list-style: none;
+}
+
+#misoMenu .misoText .drinks .drink {
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+#misoMenu .misoText .drinks .drink span {
+  font-family: "Thirsty Soft Regular";
+  font-weight: 500;
+}
+
+#misoMenu .sideSig {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 15px;
+  color: #333333;
+}
+
+@media (max-width: 375px) {
+  #misoMenu .sideSig {
+    flex-direction: column;
+  }
+}
+
+#misoMenu .sideSig div:first-child,
+#misoMenu .sideSig div:last-child {
+  width: 25%;
+  height: 3px;
+  background-color: #333333;
+  border-radius: 50px;
+}
+
+@media (max-width: 39.9375em) {
+  #misoMenu .sideSig div:first-child,
+  #misoMenu .sideSig div:last-child {
+    width: 10%;
+  }
+}
+
+@media (max-width: 375px) {
+  #misoMenu .sideSig div:first-child,
+  #misoMenu .sideSig div:last-child {
+    height: 3px;
+    width: 50%;
+    margin-top: -10px;
+  }
+}
+
+@media (max-width: 375px) {
+  #misoMenu .sideSig div:first-child {
+    width: 0;
+  }
+}
+
+#misoMenu .sideSig div:nth-child(2) {
+  margin: 0 20px;
+}
+
+@media (max-width: 375px) {
+  #misoMenu .sideSig div:nth-child(2) {
+    text-align: center;
+  }
+}
+
+#misoMenu .sideSig .sideHead {
+  margin: 0 10px;
+}
+
 .misoFeature {
   display: flex;
   justify-content: center;
@@ -543,6 +745,18 @@ header i.misoBag.open .bag .checkOut {
 @media (max-width: 63.9375em) {
   .misoFeature {
     margin-top: 0;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .misoFeature {
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 375px) {
+  .misoFeature {
+    margin-top: 15px;
   }
 }
 
@@ -608,6 +822,18 @@ header i.misoBag.open .bag .checkOut {
   }
 }
 
+@media (max-width: 39.9375em) {
+  .misoFeature .misoText h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .misoFeature .misoText h1 {
+    font-size: 3rem;
+  }
+}
+
 .misoFeature .misoText .misoButton {
   padding: 5px 15px;
   border-radius: 50px;
@@ -629,11 +855,18 @@ header i.misoBag.open .bag .checkOut {
 .misoSignature {
   display: flex;
   flex-direction: column;
+  padding: 0 20px;
 }
 
 .misoSignature .signature {
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 375px) {
+  .misoSignature .signature {
+    flex-direction: column;
+  }
 }
 
 .misoSignature .signature div:first-child,
@@ -652,8 +885,29 @@ header i.misoBag.open .bag .checkOut {
   }
 }
 
+@media (max-width: 375px) {
+  .misoSignature .signature div:first-child,
+  .misoSignature .signature div:last-child {
+    height: 3px;
+    width: 60%;
+    margin-top: -10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .misoSignature .signature div:first-child {
+    width: 0;
+  }
+}
+
 .misoSignature .signature div:nth-child(2) {
   margin: 0 20px;
+}
+
+@media (max-width: 375px) {
+  .misoSignature .signature div:nth-child(2) {
+    text-align: center;
+  }
 }
 
 .misoSignature #miso-signature {
@@ -662,7 +916,14 @@ header i.misoBag.open .bag .checkOut {
   max-width: 1375px;
 }
 
+@media (max-width: 425px) {
+  .misoSignature #miso-signature {
+    max-width: 375px;
+  }
+}
+
 .misoSignature #miso-signature .glide__track .glide__slides {
+  overflow: visible;
   padding: 1.5rem;
   display: flex;
   justify-content: center;
@@ -741,13 +1002,6 @@ header i.misoBag.open .bag .checkOut {
 
 @media (max-width: 56.25em) {
   .misoSignature #miso-signature .glide__track .glide__slides .miso-frame .ramen:hover .ramenOverlay p {
-    font-size: 12px;
-    line-height: 12px;
-  }
-}
-
-@media (max-width: 39.9375em) {
-  .misoSignature #miso-signature .glide__track .glide__slides .miso-frame .ramen:hover .ramenOverlay p {
     display: none;
   }
 }
@@ -782,6 +1036,14 @@ header i.misoBag.open .bag .checkOut {
   background-image: url("/Assets/Images/SP Ramen.png");
 }
 
+.misoSignature #miso-signature .glide__track .glide__slides .miso-frame:nth-child(5) .ramen {
+  background-image: url("/Assets/Images/HP Ramen.png");
+}
+
+.misoSignature #miso-signature .glide__track .glide__slides .miso-frame:nth-child(6) .ramen {
+  background-image: url("/Assets/Images/Spe. Def Ramen.png");
+}
+
 .misoSignature #miso-signature .misoBull {
   transform: translateX(-25%);
 }
@@ -799,71 +1061,101 @@ header i.misoBag.open .bag .checkOut {
   border: 2px solid #f2f2f2c5;
 }
 
-#misoQuest2 {
-  margin: 0 5px;
+#misoQuest {
+  margin: 10px 50px;
 }
 
-#misoQuest2 .misoTips {
-  overflow: hidden;
-  margin-top: 25px;
-  padding: 0 25px;
-  width: 100%;
+@media (max-width: 320px) {
+  #misoQuest {
+    margin: 10px 25px;
+  }
 }
 
-#misoQuest2 .misoTips input {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
+#misoQuest .aboutSig {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#misoQuest2 .misoTips .tip {
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+#misoQuest .aboutSig h2 {
+  text-align: center;
+}
+
+@media (max-width: 375px) {
+  #misoQuest .aboutSig h2 {
+    font-size: 2.5rem;
+  }
+}
+
+#misoQuest .aboutSig div {
+  background-color: #333333;
+  height: 3px;
+  width: 450px;
+  margin-top: -12px;
+  border-radius: 50px;
+}
+
+@media (max-width: 39.9375em) {
+  #misoQuest .aboutSig div {
+    display: none;
+  }
+}
+
+#misoQuest .misoTab {
   margin-bottom: 10px;
-  border-radius: 10px;
 }
 
-#misoQuest2 .misoTips .tip [type="checkbox"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-#misoQuest2 .misoTips .tip .tipLabel {
+#misoQuest .misoTab .misoLabel {
+  padding: 10px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-  background-color: #f2f2f2;
-  cursor: pointer;
+  border: 0 solid transparent;
   align-items: center;
-  transition: ease 0.5s;
+  border-radius: 10px;
+  font-family: "Thirsty Soft Regular";
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  background-color: #f2f2f27c;
+  transition: all 0.3s;
 }
 
-#misoQuest2 .misoTips .tip .tipLabel::after {
-  content: "\276F";
-  width: 1em;
-  text-align: center;
-  transition: all 0.35s;
+#misoQuest .misoTab .misoLabel i {
+  transition: all 0.3s;
 }
 
-#misoQuest2 .misoTips .tip .tipContent {
-  max-height: 0vh;
-  padding: 0 1em;
-  color: #f2f2f2;
-  background: #ffb5b5;
-  transition: all 0.35s;
+#misoQuest .misoTab .misoLabel:hover {
+  background-color: #f2f2f2;
 }
 
-#misoQuest2 .misoTips .tip input:checked ~ .tipContent {
-  max-height: 100vh;
-  padding: 1em;
+#misoQuest .misoTab .misoLabel.is-open {
+  background-color: #f2f2f2;
+  border-radius: 10px 10px 0 0;
 }
 
-#misoQuest2 .misoTips .tip input:checked ~ .tipLabel {
-  background: #ffb5b5;
-}
-
-#misoQuest2 input:checked ~ .tipLabel::after {
+#misoQuest .misoTab .misoLabel.is-open i {
   transform: rotateZ(90deg);
+  transition: all 0.3s;
+  margin-right: 5px;
+}
+
+#misoQuest .misoTab .misoLabel.is-open .misoContent {
+  display: flex;
+}
+
+#misoQuest .misoTab .misoContent {
+  overflow: hidden;
+  max-height: 0;
+  background-color: #f2f2f27c;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  transition: max-height 0.2s ease;
+}
+
+#misoQuest .misoTab .misoContent p {
+  padding: 5px 15px;
 }
 
 footer {

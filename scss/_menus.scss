@@ -37,6 +37,9 @@ header {
       }
       li {
         margin-left: 36px;
+        @include breakpoint-down(x-small) {
+          margin-left: 0;
+        }
       }
       i {
         color: $accentWhite;

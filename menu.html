@@ -110,108 +110,69 @@
       </nav>
     </header>
     <main>
-      <section class="misoBox">
-        <div id="miso-carousel" class="glide">
-          <div class="glide__track" data-glide-el="track">
-            <ul class="glide__slides">
-              <li class="miso-frame glide__slide">
-                <h1 class="misoHeading">Classic Appeal Fusion Taste</h1>
-              </li>
-              <li class="miso-frame glide__slide">
-                <h1 class="misoHeading">Locally Sourced Goodness</h1>
-              </li>
-              <li class="miso-frame glide__slide">
-                <h1 class="misoHeading">Make Memories Eat Ramen</h1>
-              </li>
-            </ul>
-          </div>
-
-          <div class="glide__bullets" data-glide-el="controls[nav]">
-            <button class="glide__bullet" data-glide-dir="=0"></button>
-            <button class="glide__bullet" data-glide-dir="=1"></button>
-            <button class="glide__bullet" data-glide-dir="=2"></button>
+      <section class="misoBox" id="menuMiso">
+        <div class="menuRamen">
+          <div id="miso-menu" class="glide">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="miso-frame glide__slide">
+                  <div class="ramen">
+                    <div class="ramenOverlay">
+                      <h4>Spe. Atk Ramen</h4>
+                      <h3 class="ramenPrice">$18</h3>
+                    </div>
+                  </div>
+                </li>
+                <li class="miso-frame glide__slide">
+                  <div class="ramen">
+                    <div class="ramenOverlay">
+                      <h4>Int Ramen</h4>
+                      <h3 class="ramenPrice">$12</h3>
+                    </div>
+                  </div>
+                </li>
+                <li class="miso-frame glide__slide">
+                  <div class="ramen">
+                    <div class="ramenOverlay">
+                      <h4>Luk Ramen</h4>
+                      <h3 class="ramenPrice">$12</h3>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- <div class="glide__bullets misoBull" data-glide-el="controls[nav]">
+              <button class="glide__bullet" data-glide-dir="=0"></button>
+              <button class="glide__bullet" data-glide-dir="=1"></button>
+              <button class="glide__bullet" data-glide-dir="=2"></button>
+            </div> -->
           </div>
         </div>
       </section>
-      <section class="misoFeature">
-        <div class="misoBowl"><img src="/Assets/Images/ramen.png" /></div>
-        <div class="misoText">
-          <h1>Making Ramen Since 1993</h1>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Reprehenderit sint eum laboriosam perferendis veniam impedit placeat
-            ducimus error laudantium obcaecati animi, dolore esse quam, dicta
-            quibusdam velit, adipisci dignissimos perspiciatis sunt quia eius.
-            Possimus ex, quia labore ipsum eaque blanditiis beatae omnis
-            quibusdam necessitatibus totam nihil at eius vitae molestias!
-          </p>
-          <a href="/about.html" class="misoButton">Learn More</a>
-        </div>
-      </section>
-      <section class="misoSignature">
-        <div class="signature">
+      <section class="misoFeature" id="misoMenu">
+        <div class="sideSig">
           <div></div>
-          <div><h3>Signature Ramen</h3></div>
+          <div class="sideHead"><h3>Sides & Drinks</h3></div>
           <div></div>
         </div>
-        <div id="miso-signature" class="glide">
-          <div class="glide__track" data-glide-el="track">
-            <ul class="glide__slides">
-              <li class="miso-frame glide__slide">
-                <div class="ramen">
-                  <div class="ramenOverlay">
-                    <h4>Spe. Attack Ramen</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptas dolorem doloremque atque dicta ad ratione.
-                    </p>
-                    <h3 class="ramenPrice">$18</h3>
-                  </div>
-                </div>
-              </li>
-              <li class="miso-frame glide__slide">
-                <div class="ramen">
-                  <div class="ramenOverlay">
-                    <h4>Int Ramen</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptas dolorem doloremque atque dicta ad ratione.
-                    </p>
-                    <h3 class="ramenPrice">$12</h3>
-                  </div>
-                </div>
-              </li>
-              <li class="miso-frame glide__slide">
-                <div class="ramen">
-                  <div class="ramenOverlay">
-                    <h4>Luk Ramen</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptas dolorem doloremque atque dicta ad ratione.
-                    </p>
-                    <h3 class="ramenPrice">$12</h3>
-                  </div>
-                </div>
-              </li>
-              <li class="miso-frame glide__slide">
-                <div class="ramen">
-                  <div class="ramenOverlay">
-                    <h4>SP Ramen</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptas dolorem doloremque atque dicta ad ratione.
-                    </p>
-                    <h3 class="ramenPrice">$14</h3>
-                  </div>
-                </div>
-              </li>
+        <div class="misoSides">
+          <div class="misoSide"></div>
+          <div class="misoText">
+            <ul class="sides">
+              <h4>Sides</h4>
+              <li class="side">Shrimp Tempura <span>— $10</span></li>
+              <li class="side">Karaage <span>— $8</span></li>
+              <li class="side">Spinach Ohitashi <span>— $9</span></li>
+              <li class="side">Teriyaki Tofu <span>— $6</span></li>
+              <li class="side">Ramen Egg <span>— $2</span></li>
             </ul>
-          </div>
-
-          <div class="glide__bullets misoBull" data-glide-el="controls[nav]">
-            <button class="glide__bullet" data-glide-dir="=0"></button>
-            <button class="glide__bullet" data-glide-dir="=1"></button>
-            <button class="glide__bullet" data-glide-dir="=2"></button>
+            <ul class="drinks">
+              <h4>Drinks</h4>
+              <li class="drink">Ramune <span>— $3</span></li>
+              <li class="drink">Fountain Drink <span>— $5</span></li>
+              <li class="drink">Milk Tea <span>— $5</span></li>
+              <li class="drink">Coffee <span>— $3</span></li>
+            </ul>
           </div>
         </div>
       </section>
@@ -227,11 +188,11 @@
       </section>
     </footer>
   </body>
-  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+  <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
   <script>
     new Glide(".glide").mount();
   </script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="/js/glide.js"></script>
+  <script src="/js/menu.js"></script>
   <script src="/js/script.js"></script>
 </html>
