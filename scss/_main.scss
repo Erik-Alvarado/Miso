@@ -87,24 +87,157 @@
   height: 500px;
   display: flex;
   margin-top: 100px;
-  justify-content: space-evenly;
-  .menuRamen {
-    width: 400px;
-    #miso-menu {
-      height: 200px;
-      .miso-frame:nth-child(1) {
-        .ramen {
-          background-image: url("/Assets/Images/menu/mae-mu-en4qp-aK1h4-unsplash.png");
+  flex-direction: column;
+  @media (max-width: 916px) {
+    height: 800px;
+  }
+  @media (max-width: 616px) {
+    height: 1200px;
+  }
+  @media (max-width: 425px) {
+    height: 1225px;
+  }
+  .menuSig {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    div:first-child,
+    div:last-child {
+      height: 3px;
+      width: 25%;
+      border-radius: 50px;
+      background-color: $bodyBlack;
+      align-self: center;
+      @include breakpoint-down(x-small) {
+        width: 10%;
+      }
+      @media (max-width: 375px) {
+        height: 3px;
+        width: 10%;
+        margin-top: -10px;
+      }
+    }
+    div:nth-child(2) {
+      margin: 0 20px;
+    }
+  }
+  .foodMenus {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    .foodMenu {
+      margin-bottom: 10px;
+      .foodImg {
+        margin-bottom: 25px;
+        width: 300px;
+        height: 175px;
+        transform-style: preserve-3d;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        input[type="radio"] {
+          display: none;
+        }
+        // RAMEN SLIDER CONTROLS---------------
+        #ramen-1:checked ~ .cards #food-3,
+        #ramen-2:checked ~ .cards #food-1,
+        #ramen-3:checked ~ .cards #food-2 {
+          transform: translateX(-40%) scale(0.8);
+          opacity: 0.4;
+          z-index: 0;
+        }
+        #ramen-1:checked ~ .cards #food-2,
+        #ramen-2:checked ~ .cards #food-3,
+        #ramen-3:checked ~ .cards #food-1 {
+          transform: translateX(40%) scale(0.8);
+          opacity: 0.4;
+          z-index: 0;
+        }
+        #ramen-1:checked ~ .cards #food-1,
+        #ramen-2:checked ~ .cards #food-2,
+        #ramen-3:checked ~ .cards #food-3 {
+          transform: translateX(0) scale(1);
+          opacity: 1;
+          z-index: 1;
+        }
+        // Katsu Controls -----------
+        #katsu-1:checked ~ .cards #food-3,
+        #katsu-2:checked ~ .cards #food-1,
+        #katsu-3:checked ~ .cards #food-2 {
+          transform: translateX(-40%) scale(0.8);
+          opacity: 0.4;
+          z-index: 0;
+        }
+        #katsu-1:checked ~ .cards #food-2,
+        #katsu-2:checked ~ .cards #food-3,
+        #katsu-3:checked ~ .cards #food-1 {
+          transform: translateX(40%) scale(0.8);
+          opacity: 0.4;
+          z-index: 0;
+        }
+        #katsu-1:checked ~ .cards #food-1,
+        #katsu-2:checked ~ .cards #food-2,
+        #katsu-3:checked ~ .cards #food-3 {
+          transform: translateX(0) scale(1);
+          opacity: 1;
+          z-index: 1;
+        }
+        // Salad Controls ---------------
+        #salad-1:checked ~ .cards #food-3,
+        #salad-2:checked ~ .cards #food-1,
+        #salad-3:checked ~ .cards #food-2 {
+          transform: translateX(-40%) scale(0.8);
+          opacity: 0.4;
+          z-index: 0;
+        }
+        #salad-1:checked ~ .cards #food-2,
+        #salad-2:checked ~ .cards #food-3,
+        #salad-3:checked ~ .cards #food-1 {
+          transform: translateX(40%) scale(0.8);
+          opacity: 0.4;
+          z-index: 0;
+        }
+        #salad-1:checked ~ .cards #food-1,
+        #salad-2:checked ~ .cards #food-2,
+        #salad-3:checked ~ .cards #food-3 {
+          transform: translateX(0) scale(1);
+          opacity: 1;
+          z-index: 1;
+        }
+        .cards {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          .card {
+            position: absolute;
+            width: 60%;
+            height: 100%;
+            left: 0;
+            right: 0;
+            transition: transform 0.4s ease;
+            cursor: pointer;
+            margin: auto;
+            img {
+              box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+              width: 100%;
+              height: 100%;
+              border-radius: 10px;
+              object-fit: cover;
+            }
+          }
         }
       }
-      .miso-frame:nth-child(2) {
-        .ramen {
-          background-image: url("/Assets/Images/menu/mae-mu-H5Hj8QV2Tx4-unsplash.png");
-        }
-      }
-      .miso-frame:nth-child(3) {
-        .ramen {
-          background-image: url("/Assets/Images/menu/michele-blackwell-rAyCBQTH7ws-unsplash.png");
+      .foodList {
+        text-align: center;
+        list-style: none;
+        line-height: 35px;
+
+        .food {
+          span {
+            font-family: "Thirsty Soft Regular";
+          }
         }
       }
     }

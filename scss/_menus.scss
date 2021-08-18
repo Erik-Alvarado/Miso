@@ -150,7 +150,7 @@ header {
   .misoNav.active {
     align-items: center;
     ul.misoLinks {
-      margin-top: 240px;
+      margin-top: 200px;
       opacity: 100%;
       background-color: white;
       border-radius: 0 0 10px 10px;
@@ -164,10 +164,12 @@ header {
         height: 100%;
         margin-top: 0;
         align-items: center;
+        box-shadow: 0 0 0 0;
       }
       li {
         margin-top: 5px;
       }
+
       a:hover {
         color: $misoRed;
       }
@@ -181,6 +183,11 @@ header {
         padding: 0;
         @include breakpoint-up(medium) {
           padding: 25px 0;
+        }
+      }
+      .mobileAbout {
+        @include breakpoint-down(small) {
+          display: none;
         }
       }
       .dropdownContent {

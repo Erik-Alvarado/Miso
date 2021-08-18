@@ -34,7 +34,7 @@
         /></a>
         <ul class="misoLinks">
           <li class="dropdown">
-            <a href="/about.html">About Us</a>
+            <a class="mobileAbout" href="/about.html">About Us</a>
             <ul class="dropdownContent">
               <li><a href="/about.html">Our Story</a></li>
               <li><a href="/about.html#misoQuest">FAQ</a></li>
@@ -111,41 +111,97 @@
     </header>
     <main>
       <section class="misoBox" id="menuMiso">
-        <div class="menuRamen">
-          <div id="miso-menu" class="glide">
-            <div class="glide__track" data-glide-el="track">
-              <ul class="glide__slides">
-                <li class="miso-frame glide__slide">
-                  <div class="ramen">
-                    <div class="ramenOverlay">
-                      <h4>Spe. Atk Ramen</h4>
-                      <h3 class="ramenPrice">$18</h3>
-                    </div>
-                  </div>
-                </li>
-                <li class="miso-frame glide__slide">
-                  <div class="ramen">
-                    <div class="ramenOverlay">
-                      <h4>Int Ramen</h4>
-                      <h3 class="ramenPrice">$12</h3>
-                    </div>
-                  </div>
-                </li>
-                <li class="miso-frame glide__slide">
-                  <div class="ramen">
-                    <div class="ramenOverlay">
-                      <h4>Luk Ramen</h4>
-                      <h3 class="ramenPrice">$12</h3>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+        <div class="menuSig">
+          <div></div>
+          <div class="mainHead"><h3>Menu</h3></div>
+          <div></div>
+        </div>
+        <div class="foodMenus">
+          <div class="foodMenu">
+            <div class="foodImg">
+              <input type="radio" name="slider" id="ramen-1" checked />
+              <input type="radio" name="slider" id="ramen-2" />
+              <input type="radio" name="slider" id="ramen-3" />
+              <div class="cards">
+                <label class="card" for="ramen-1" id="food-1">
+                  <img src="/Assets/Images/menu/hpramen.png" alt="ramen" />
+                </label>
+                <label class="card" for="ramen-2" id="food-2">
+                  <img src="/Assets/Images/menu/intramen.png" alt="ramen" />
+                </label>
+                <label class="card" for="ramen-3" id="food-3">
+                  <img src="/Assets/Images/menu/lukramen.png" alt="ramen" />
+                </label>
+              </div>
             </div>
-            <!-- <div class="glide__bullets misoBull" data-glide-el="controls[nav]">
-              <button class="glide__bullet" data-glide-dir="=0"></button>
-              <button class="glide__bullet" data-glide-dir="=1"></button>
-              <button class="glide__bullet" data-glide-dir="=2"></button>
-            </div> -->
+            <ul class="foodList">
+              <h4>Signature Ramen</h4>
+              <li class="food">Sp Ramen <span>— $14</span></li>
+              <li class="food">Hp Ramen <span>— $16</span></li>
+              <li class="food">Int Ramen <span>— $12</span></li>
+              <li class="food">Spe. Atk Ramen <span>— $18</span></li>
+              <li class="food">Spe. Def Ramen <span>— $18</span></li>
+              <li class="food">Luk Ramen <span>— $12</span></li>
+            </ul>
+          </div>
+          <div class="foodMenu">
+            <div class="foodImg">
+              <input type="radio" name="slider" id="katsu-1" checked />
+              <input type="radio" name="slider" id="katsu-2" />
+              <input type="radio" name="slider" id="katsu-3" />
+              <div class="cards">
+                <label class="card" for="katsu-1" id="food-1">
+                  <img
+                    src="/Assets/Images/menu/ballpark katsu.png"
+                    alt="katsu"
+                  />
+                </label>
+                <label class="card" for="katsu-2" id="food-2">
+                  <img src="/Assets/Images/menu/FishKatsu.png" alt="katsu" />
+                </label>
+                <label class="card" for="katsu-3" id="food-3">
+                  <img src="/Assets/Images/menu/pork katsu.png" alt="katsu" />
+                </label>
+              </div>
+            </div>
+            <ul class="foodList">
+              <h4>Katsu + Rice</h4>
+              <li class="food">Ballpark Katsu <span>— $16</span></li>
+              <li class="food">Fish Katsu <span>— $12</span></li>
+              <li class="food">Ton Katsu <span>— $12</span></li>
+              <li class="food">Chicken Katsu <span>— $10</span></li>
+            </ul>
+          </div>
+          <div class="foodMenu">
+            <div class="foodImg">
+              <input type="radio" name="slider" id="salad-1" checked />
+              <input type="radio" name="slider" id="salad-2" />
+              <input type="radio" name="slider" id="salad-3" />
+              <div class="cards">
+                <label class="card" for="salad-1" id="food-1">
+                  <img
+                    src="/Assets/Images/menu/Hijiki-Seaweed-Salad-6678-I-500x375.png"
+                    alt="salad"
+                  />
+                </label>
+                <label class="card" for="salad-2" id="food-2">
+                  <img
+                    src="/Assets/Images/menu/kinpira-gobo-burdock-carrot-stir-fry-ft-1.png"
+                    alt="salad"
+                  />
+                </label>
+                <label class="card" for="salad-3" id="food-3">
+                  <img src="/Assets/Images/menu/okra Salad.png" alt="salad" />
+                </label>
+              </div>
+            </div>
+            <ul class="foodList">
+              <h4>Salad</h4>
+              <li class="food">Kinpira Gobo <span>— $10</span></li>
+              <li class="food">Kiriboshi Daikon <span>— $12</span></li>
+              <li class="food">Okra Aemono <span>— $11</span></li>
+              <li class="food">Hijiki Carrot Salad <span>— $9</span></li>
+            </ul>
           </div>
         </div>
       </section>
@@ -189,9 +245,6 @@
     </footer>
   </body>
   <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
-  <script>
-    new Glide(".glide").mount();
-  </script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="/js/menu.js"></script>
   <script src="/js/script.js"></script>

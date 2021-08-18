@@ -252,7 +252,7 @@ header .misoNav.active {
 }
 
 header .misoNav.active ul.misoLinks {
-  margin-top: 240px;
+  margin-top: 200px;
   opacity: 100%;
   background-color: white;
   border-radius: 0 0 10px 10px;
@@ -272,6 +272,7 @@ header .misoNav.active ul.misoLinks {
     height: 100%;
     margin-top: 0;
     align-items: center;
+    box-shadow: 0 0 0 0;
   }
 }
 
@@ -300,6 +301,12 @@ header .misoNav.active ul.misoLinks .dropdown a {
 @media (min-width: 56.25em) {
   header .misoNav.active ul.misoLinks .dropdown a {
     padding: 25px 0;
+  }
+}
+
+@media (max-width: 56.25em) {
+  header .misoNav.active ul.misoLinks .mobileAbout {
+    display: none;
   }
 }
 
@@ -516,27 +523,193 @@ header i.misoBag.open .bag .checkOut {
   height: 500px;
   display: flex;
   margin-top: 100px;
+  flex-direction: column;
+}
+
+@media (max-width: 916px) {
+  #menuMiso {
+    height: 800px;
+  }
+}
+
+@media (max-width: 616px) {
+  #menuMiso {
+    height: 1200px;
+  }
+}
+
+@media (max-width: 425px) {
+  #menuMiso {
+    height: 1225px;
+  }
+}
+
+#menuMiso .menuSig {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+#menuMiso .menuSig div:first-child,
+#menuMiso .menuSig div:last-child {
+  height: 3px;
+  width: 25%;
+  border-radius: 50px;
+  background-color: #333333;
+  align-self: center;
+}
+
+@media (max-width: 39.9375em) {
+  #menuMiso .menuSig div:first-child,
+  #menuMiso .menuSig div:last-child {
+    width: 10%;
+  }
+}
+
+@media (max-width: 375px) {
+  #menuMiso .menuSig div:first-child,
+  #menuMiso .menuSig div:last-child {
+    height: 3px;
+    width: 10%;
+    margin-top: -10px;
+  }
+}
+
+#menuMiso .menuSig div:nth-child(2) {
+  margin: 0 20px;
+}
+
+#menuMiso .foodMenus {
+  display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
-#menuMiso .menuRamen {
-  width: 400px;
+#menuMiso .foodMenus .foodMenu {
+  margin-bottom: 10px;
 }
 
-#menuMiso .menuRamen #miso-menu {
-  height: 200px;
+#menuMiso .foodMenus .foodMenu .foodImg {
+  margin-bottom: 25px;
+  width: 300px;
+  height: 175px;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-#menuMiso .menuRamen #miso-menu .miso-frame:nth-child(1) .ramen {
-  background-image: url("/Assets/Images/menu/mae-mu-en4qp-aK1h4-unsplash.png");
+#menuMiso .foodMenus .foodMenu .foodImg input[type="radio"] {
+  display: none;
 }
 
-#menuMiso .menuRamen #miso-menu .miso-frame:nth-child(2) .ramen {
-  background-image: url("/Assets/Images/menu/mae-mu-H5Hj8QV2Tx4-unsplash.png");
+#menuMiso .foodMenus .foodMenu .foodImg #ramen-1:checked ~ .cards #food-3,
+#menuMiso .foodMenus .foodMenu .foodImg #ramen-2:checked ~ .cards #food-1,
+#menuMiso .foodMenus .foodMenu .foodImg #ramen-3:checked ~ .cards #food-2 {
+  transform: translateX(-40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
 }
 
-#menuMiso .menuRamen #miso-menu .miso-frame:nth-child(3) .ramen {
-  background-image: url("/Assets/Images/menu/michele-blackwell-rAyCBQTH7ws-unsplash.png");
+#menuMiso .foodMenus .foodMenu .foodImg #ramen-1:checked ~ .cards #food-2,
+#menuMiso .foodMenus .foodMenu .foodImg #ramen-2:checked ~ .cards #food-3,
+#menuMiso .foodMenus .foodMenu .foodImg #ramen-3:checked ~ .cards #food-1 {
+  transform: translateX(40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#menuMiso .foodMenus .foodMenu .foodImg #ramen-1:checked ~ .cards #food-1,
+#menuMiso .foodMenus .foodMenu .foodImg #ramen-2:checked ~ .cards #food-2,
+#menuMiso .foodMenus .foodMenu .foodImg #ramen-3:checked ~ .cards #food-3 {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+#menuMiso .foodMenus .foodMenu .foodImg #katsu-1:checked ~ .cards #food-3,
+#menuMiso .foodMenus .foodMenu .foodImg #katsu-2:checked ~ .cards #food-1,
+#menuMiso .foodMenus .foodMenu .foodImg #katsu-3:checked ~ .cards #food-2 {
+  transform: translateX(-40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#menuMiso .foodMenus .foodMenu .foodImg #katsu-1:checked ~ .cards #food-2,
+#menuMiso .foodMenus .foodMenu .foodImg #katsu-2:checked ~ .cards #food-3,
+#menuMiso .foodMenus .foodMenu .foodImg #katsu-3:checked ~ .cards #food-1 {
+  transform: translateX(40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#menuMiso .foodMenus .foodMenu .foodImg #katsu-1:checked ~ .cards #food-1,
+#menuMiso .foodMenus .foodMenu .foodImg #katsu-2:checked ~ .cards #food-2,
+#menuMiso .foodMenus .foodMenu .foodImg #katsu-3:checked ~ .cards #food-3 {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+#menuMiso .foodMenus .foodMenu .foodImg #salad-1:checked ~ .cards #food-3,
+#menuMiso .foodMenus .foodMenu .foodImg #salad-2:checked ~ .cards #food-1,
+#menuMiso .foodMenus .foodMenu .foodImg #salad-3:checked ~ .cards #food-2 {
+  transform: translateX(-40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#menuMiso .foodMenus .foodMenu .foodImg #salad-1:checked ~ .cards #food-2,
+#menuMiso .foodMenus .foodMenu .foodImg #salad-2:checked ~ .cards #food-3,
+#menuMiso .foodMenus .foodMenu .foodImg #salad-3:checked ~ .cards #food-1 {
+  transform: translateX(40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#menuMiso .foodMenus .foodMenu .foodImg #salad-1:checked ~ .cards #food-1,
+#menuMiso .foodMenus .foodMenu .foodImg #salad-2:checked ~ .cards #food-2,
+#menuMiso .foodMenus .foodMenu .foodImg #salad-3:checked ~ .cards #food-3 {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+#menuMiso .foodMenus .foodMenu .foodImg .cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#menuMiso .foodMenus .foodMenu .foodImg .cards .card {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+  margin: auto;
+}
+
+#menuMiso .foodMenus .foodMenu .foodImg .cards .card img {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#menuMiso .foodMenus .foodMenu .foodList {
+  text-align: center;
+  list-style: none;
+  line-height: 35px;
+}
+
+#menuMiso .foodMenus .foodMenu .foodList .food span {
+  font-family: "Thirsty Soft Regular";
 }
 
 #aboutMiso {
