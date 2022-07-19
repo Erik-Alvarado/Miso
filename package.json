@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Erik-Alvarado/Miso#readme",
   "dependencies": {
-    "@glidejs/glide": "^3.4.1"
+    "@glidejs/glide": "^3.5.2",
+    "glidejs": "^2.1.0"
   }
 }
